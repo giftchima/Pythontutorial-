@@ -1,5 +1,8 @@
-# This chapter is an introduction to loops.
-## Loops are used to run codes in a continous cyle as long as the condition is
+This chapter is an introduction to loops. Loops are used to run codes in a continous cyle as long as the condition is
+
+Exercise 5.1
+
+
 
 
 
