@@ -8,13 +8,13 @@ For Loops are used when you want to run a loop for a specific duration.
 
 Exercise 5.11: Print each individual element in the list
 
-* Example 1 -
-* d =["banana", "apple", "microsoft"]
-* for element in d:
-*    print (element)
-* Example 2 -
-* a = [3,10,-1]
-* for element in a:
+Example 1 -
+*  d =["banana", "apple", "microsoft"]
+*  for element in d:
+*     print (element)
+Example 2 -
+*  a = [3,10,-1]
+*  for element in a:
 *     print (element)
 *     print (element)
 
