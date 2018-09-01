@@ -6,22 +6,26 @@ This chapter is an introduction to loops. Loops are used to run codes in a conti
 ## For loops 
 For Loops are used when you want to run a loop for a specific duration. 
 
-Example 1:
-d= ["banana", "apple", "microsoft"]
-#to print each individual element in list
-for element in d:
-    print (element)
-a = [3,10,-1]
-for element in a:
-    print (element)
-    print (element)
-- Finding the sum of a list
-b = [3,10,-1]
-total = 0
-for element in b:
-    total = total + element
-print (total)
-#to find range of numbers
+Exercise 5.11: Print each individual element in the list
+
+* Example 1 -
+* d =["banana", "apple", "microsoft"]
+* for element in d:
+*    print (element)
+* Example 2 -
+* a = [3,10,-1]
+* for element in a:
+*     print (element)
+*     print (element)
+
+Example 5.21: Finding the sum of a list
+* b = [3,10,-1]
+* total = 0
+* for element in b:
+*     total = total + element
+* print (total)
+
+Example to find range of numbers
 range(1,5) #find the range of numbers from 1 to 5 not including 5
 print (range(1,5))
 c = list (range(1,5)) #to convert to a list
