@@ -1,0 +1,200 @@
+# This chapter is an introduction to loops.
+## Loops are used to run codes in a continous cyle as long as the condition is
+
+
+
+
+
+#For loops : used when you want to run a loop for a specific duration
+d= ["banana", "apple", "microsoft"]
+#to print each individual element in list
+for element in d:
+    print (element)
+a = [3,10,-1]
+for element in a:
+    print (element)
+    print (element)
+#to find the sum of list
+b = [3,10,-1]
+total = 0
+for element in b:
+    total = total + element
+print (total)
+#to find range of numbers
+range(1,5) #find the range of numbers from 1 to 5 not including 5
+print (range(1,5))
+c = list (range(1,5)) #to convert to a list
+print (c)
+
+#example 1
+total1= 0
+for element in range(1,5):
+    total1= total1 + element # shortcut is total1 += element
+print(total1)
+
+#example 2
+print(list(range(1,8)))
+total2 = 0
+for element in range(1,8):
+    if element % 3 == 0:
+        total2= total2+ element  #module operator to get remainder of division use %
+print(total2)
+
+#example 3 - can you compute all multiples of 3,5 that are less than 100?
+
+total3 =0
+for element in range(1,100):
+    if element % 3 == 0:
+        total3= total3 + element
+    elif element % 5 == 0:
+        total3= total3 + element
+print(total3)
+ #or
+total1 = 0
+for i in range(1,100):
+    if i % 3 == 0:
+        total1 += i
+print(total1)
+
+
+total2 = 0
+for i in range(1,100):
+    if i % 5 == 0:
+        total2 += i
+print(total2)
+
+totalToSub = 1683
+for i in range(1,100):
+    if i % (3 * 5) == 0:
+        totalToSub += i
+print(totalToSub)
+
+#using while loops : use when you don't know how many loops you need beforehand
+
+total6= 0
+j = 1
+while j < 5:
+    total6 += j
+print(total6)
+
+given_list = [5,4,4,3,1,-2,-3,-5]  #find sum of only postive numbers
+
+total7 = 0
+i = 0
+while given_list[i] > 0:
+    total7 += given_list[i]
+    i += 1
+print(total7)
+
+given_list1 = [5,4,4,3,1]
+total8= 0
+i=0
+while i < len(given_list1) and given_list1[i] > 0:
+    total8+= given_list1[i]
+    i += 1
+print(total8)
+# using break statement to add only positive numbers
+given_list2 = [5,4,4,3,1,-2,-3,-5]
+total4 = 0
+for element in given_list2:
+    if element <= 0:
+        break
+    total4 += element
+print(total4)
+
+#using break statement in while loops
+given_list3 = [5,4,4,3,1,-2,-3,-5]
+total9 = 0
+i = 0
+while True:
+    total9 += given_list3[i]
+    i += 1
+    if given_list3[i] <= 0:
+        break
+print(total9)
+
+#exercise for while loops: calculate sum of negative numbers
+
+given_list4= [7,5,4,4,3,1,-2,-3,-5,-7]
+total10= 0
+for element in given_list4:
+    if element >= 0:
+        print('null')
+    elif element <=0:
+        total10 += element
+print(total10)
+
+# using while loop:
+
+given_list = [7, 5, 4, 4, 3, 1, -2, -3, -5, -7]
+total = 0
+i = 0
+
+while i < len(given_list):
+    if given_list[i] <= 0:
+        total += given_list[i]
+    i += 1
+
+print (total)
+#Python for Everyone
+
+n = 5
+while n > 0:
+    print(n)
+    n=n-1
+print('Blastoff')
+
+#breaking out of a loop: break statement ends the current
+#loop and jumps to the statement immediately following the loopself.
+#look at py4e on youtube
+while True:
+    line == input('>')
+
+#continue stament ends the current iteration and jumps to the top
+#of the loop and starts the next iteration
+
+while True:
+    line ==input('>')
+    if line[0]=='#':
+        continue
+    if line == 'done'
+
+#definite loop
+
+for i in [5,4,3,2,1] :
+    print(i)
+print('Blastoff')
+
+friends = ['Joseph', 'Glenn', 'Jola', 'Gift', 'Bryan']
+for friend in friends:
+    print('Merry Christmas:', friend)
+print(friends[2],'love you')
+
+#loop patternsm:counting in a loop: to find total or sum
+
+zork = 0
+print('Before, zork')
+for thing in [9,42,56]:
+    zork = zork + thing
+    print(zork, thing)
+print('after',zork)
+
+#USING A BOOLEAN VALUE
+found = False
+print('Before', found)
+for value in [9,4,42,3,74]:
+    if value ==3:
+        found == True
+    print('found', value)
+print('After',found)
+
+#FINDING THE SMALLEST value
+smallest = None #not a string but a special type
+print('Before')
+for value in [9,41,12,3,74,15]:
+    if smallest is None:     # is stronger than ==, demands equality in type and value of variable
+        smallest = value     # use is only on boolean and None type
+    elif value < smallest:
+        smallest = value
+    print(smallest, value)
+print('AFTER', smallest)
