@@ -1,14 +1,12 @@
-This chapter is an introduction to loops. Loops are used to run codes in a continous cyle as long as the condition is
+Introduction to Loops
+=====================
 
-Exercise 5.1
+# This chapter is an introduction to loops. Loops are used to run codes in a continous cyle as long as the condition is true
 
+## For loops 
+### For Loops are used when you want to run a loop for a specific duration. 
 
-
-
-
-
-
-#For loops : used when you want to run a loop for a specific duration
+Example 1:
 d= ["banana", "apple", "microsoft"]
 #to print each individual element in list
 for element in d:
@@ -17,7 +15,7 @@ a = [3,10,-1]
 for element in a:
     print (element)
     print (element)
-#to find the sum of list
+- Finding the sum of a list
 b = [3,10,-1]
 total = 0
 for element in b:
