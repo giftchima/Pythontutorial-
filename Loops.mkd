@@ -1,10 +1,10 @@
 Introduction to Loops
 =====================
 
-# This chapter is an introduction to loops. Loops are used to run codes in a continous cyle as long as the condition is true
+This chapter is an introduction to loops. Loops are used to run codes in a continous cyle as long as the condition is true
 
 ## For loops 
-### For Loops are used when you want to run a loop for a specific duration. 
+For Loops are used when you want to run a loop for a specific duration. 
 
 Example 1:
 d= ["banana", "apple", "microsoft"]
