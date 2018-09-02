@@ -6,9 +6,9 @@ IF-ELSE CLASS ASSIGNMENT
 Alien Colors #1: Imagine an alien was just shot down in a game.
 Create a variable called alien_color and assign it a value of 'green','yellow', or 'red’.
 
-• Write an if statement to test whether the alien’s color is green. If it is, print a
+- Write an if statement to test whether the alien’s color is green. If it is, print a
 message that the player just earned 5 points.
-• Write one version of this program that passes the if test and another that
+- Write one version of this program that passes the if test and another that
 fails. (The version that fails will have no output.) 
 
 ### code 
@@ -24,11 +24,11 @@ fails. (The version that fails will have no output.)
 ## Problem 2:
 Alien Colors #2: Choose a color for an alien as you did in problem 1, and write an if-else chain.
 
-• If the alien’s color is green, print a statement that the player just earned 5
+- If the alien’s color is green, print a statement that the player just earned 5
 points for shooting the alien.
-• If the alien’s color isn’t green, print a statement that the player just earned 10
+- If the alien’s color isn’t green, print a statement that the player just earned 10
 points.
-• Write one version of this program that runs the if block and another that runs
+- Write one version of this program that runs the if block and another that runs
 the else block.''
 ### code for version 1
     alien_color = 'red' #version 1: a version that runs the else block.
@@ -42,3 +42,128 @@ the else block.''
         print('You have just earned 5 points!')
     else:
         print('You have just earned 10 points!')
+## Problem 3:
+Alien Colors #3: Turn your if-else chain from problem 2 into an ifelifelse
+chain.
+- If the alien is green, print a message that the player earned 5 points.
+- If the alien is yellow, print a message that the player earned 10 points.
+- If the alien is red, print a message that the player earned 15 points.
+-Write three versions of this program, making sure each message is printed for
+the appropriate color alien. 
+### code
+
+    alien_color = 'green' #choose green for alien color
+    if alien_color == 'red': #write an if statement with a condition that alien color is red.
+        print('You have just earned 5 points!')
+    elif alien_color == 'yellow':   
+        print('You have just earned 10 points!')
+    else:
+        print('You have just earned 15 points!')
+## Problem 4:
+Write an interactive quiz. It should ask the user three multiple-choice or true/false
+questions about something. It must keep track of how many they get wrong, and
+print out a "score" at the end.
+### code
+    print('Are you ready for a quiz?\n Okay, here it comes!')
+    score = 0 #Creating and defining the variable for the score
+    total_score = score
+    answer_choices1 = ['Lagos','Abuja','Warri','California'] #Creating a list of answer choices
+    answer_choicesletter =["a","b","c","d"]
+    
+    print('What is the capital of Nigeria? ') #Question 1  
+    answer_1= input('a)Lagos\nb)Abuja\nc)Warri\nd)California\n: ')
+    if answer_1 == (answer_choices1[1]) or (answer_choicesletter[1]) :
+        print('Correct!')
+        score = score + 1   #Adding the number of correct answers
+        print('You have', score, 'point!')
+    else:
+        print('Incorrect, the right answer is Abuja.')
+
+    print('What is the color of the sky?')  #Question 2 
+    answer_choices2 = ['Blue','Red','White','Yellow'] #Creating a list of answer choices
+    answer_2= input('a)Blue\nb)Red\nc)White\nd)Yellow\n: ') #inputting answer for question 2
+    if answer_2 == (answer_choices2[0]) or (answer_choicesletter[0]):
+        print('Correct!')
+        score = score + 1   #Adding the number of correct answers
+        print('You have', score, 'points!')
+    else:
+        print('Incorrect, the right answer is Blue.')
+  
+    print('Who was the first African American President of the United States of America?') #Question 3
+    answer_choices3 = ['Oprah','Frederick Douglas','Barack Obama','Denzel Washington'] #Creating a list of answer choices
+    answer_3= input('a)Oprah\nb)Frederick Douglas\nc)Barack Obama\nd)Denzel Washington\n: ') #inputting answer for question 3
+    if answer_3 == (answer_choices3[2]) or (answer_choicesletter[1]):
+        print('Correct!')
+        score = score + 1   #Adding the number of correct answers
+        print('You have', score, 'points!')
+    else:
+        print('Incorrect, the right answer is Barack Obama.')
+
+    print('Thanks for playing my interactive quiz. Your total score is', score, 'out of 3!')
+ 
+ ## Problem 5:
+ Input a weight in earth and give the weight in other planets
+ ### code
+    weight_on_earth = int(input('Please enter your current earth weight in kg:'))
+    print('I have information for the following planets:\n 1.Venus\n 2.Mars\n 3.Jupiter\n 4.Saturn\n 5.Uranus\n 6.Neptune\n 7.Mercury')
+    planet_number = int(input('Which planet are you visiting?: ')) #write input statement to select which planet weight you want.
+    if planet_number == 1:  #write if-elif statement to pick out selected option from list.
+        weight_venus = (weight_on_earth * 0.78)
+        print('Your weight in Venus is', weight_venus, 'kg.')
+    elif planet_number == 2:
+        weight_mars = (weight_on_earth * 0.39)
+        print('Your weight in Mars is', weight_mars, 'kg.')
+    elif planet_number == 3:
+        weight_jupiter = (weight_on_earth* 2.65)
+        print('Your weight in Jupiter is', weight_jupiter, 'kg.')
+    elif planet_number == 4:
+        weight_saturn = (weight_on_earth* 1.17)
+        print('Your weight in Saturn is', weight_saturn, 'kg.')
+    elif planet_number == 5:
+        weight_uranus = (weight_on_earth* 1.05)
+        print('Your weight in Jupiter is', weight_uranus, 'kg.')
+    elif planet_number == 6:
+        weight_neptune = (weight_on_earth* 1.23)
+        print('Your weight in Neptune is', weight_neptune, 'kg.')
+    elif planet_number == 7:
+        weight_mercury = (weight_on_earth* 0.38)
+        print('Your weight in Neptune is', weight_mercury, 'kg.')
+    else:
+        print('Sorry that is not a plant!')
+
+## Additional Problems 1
+
+#Input 3 numbers and find the greatest : use else and nested if :
+### code
+    number1 = float(input('Input First value: '))
+    number2= float(input('Input second value: '))
+    number3 = float(input('Input Third value: ' ))
+    if (number1 > number2) and (number1 > number3):
+        biggest_number = number1
+    else:
+        if (number2 > number1) and (number2 > number3):
+            biggest_number = number2
+        else:
+            biggest_number = number3
+    print('The biggest number between',number1,',',number2,'and',number3,'is',biggest_number)
+    
+## #Additional Problems 2
+Find out if a year is a leap year
+### code 
+    leap_year = int(input('Is this year a leap year?: ')) #Input the year you want
+
+    if leap_year % 4 == 0:  #Determine whether a year is a leap year using equation
+        if (leap_year % 100 != 0) or (leap_year % 400 == 0):
+            print (leap_year,'is a leap year.')
+        else:
+            print(leap_year, 'is not a leap year')
+    else:
+        print(leap_year, 'is not a leap year')
+## Additional Problems 3
+Find out if a number is divisible by 2 and 3
+### code
+    number = int(input('Pick a number: '))
+    if (number % 2 == 0) and (number % 3 == 0):
+        print(number, 'is divisible by 2 and 3.')
+    else:
+        print (number, 'is not divisible by 2 and 3.')
