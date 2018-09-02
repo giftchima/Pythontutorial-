@@ -3,7 +3,7 @@ Introduction to Loops
 
 This chapter is an introduction to loops. Loops are used to run codes in a continous cyle as long as the condition is true
 
-## For loops 
+## FOR LOOPS 
 For Loops are used when you want to run a loop for a specific duration. 
 
 *Exercise 5.11: Print each individual element in the list*
@@ -79,7 +79,7 @@ for i in range(1,100):
         totalToSub += i
 print(totalToSub)
 
-## while loops
+## WHILE LOOPS
 While loops use when you don't know how many loops you need beforehand. If the loop expression is True, then the indented code block is executed and the loops goes back to the beggining while loop statement. Then, the loop is executed again if the while loop statement remains true. If the statement is false, the  then execution instead proceeds to below the loop body.
 
 *Exercise 5. - Find total of (1 to 4).*
@@ -111,7 +111,7 @@ Example 2 - You don't have a negative number so the loop will be infinite. There
         total8+= given_list1[i]
         i += 1
     print(total8)
-
+    
 *Exercise 5. - Draw a face using symbols*
 
 Example 1 -
@@ -131,27 +131,46 @@ Example 1 -
 
     print('Goodbye.\n')
     
+### COUNTING WITH LOOPS
+In order to count with loops, you can use a variable to count the number of iterations, called a loop variable. For example, to iterate 10 times using an integer loop variable i:
+            use i = 0
+            while i <=10:
+                i = i + 1
+                
+*Exercise 5. - Write a program that prints the U.S. presidential election years from 1792 to present day, knowing that such elections occur every 4 years.*
+Example 1 -
+### code
+    year = 1792
+    current_year = 2018
+    while year <= current_year:
+        year = year + 4
+        print(year)
+### USING BREAK AND CONTINUE IN LOOPS
+*Exerise 5. - *
+
+Example 1 -Use break statement in while loops.
+### code
+    given_list3 = [5,4,4,3,1,-2,-3,-5]
+    total9 = 0
+    i = 0
+    while True:
+        total9 += given_list3[i]
+        i += 1
+        if given_list3[i] <= 0:
+            break
+    print(total9)
+
+Example 2 - Use a break statement to add only positive numbers.
+### code
+    given_list2 = [5,4,4,3,1,-2,-3,-5]
+    total4 = 0
+    for element in given_list2:
+        if element <= 0:
+            break
+        total4 += element
+    print(total4)
 
 
-# using break statement to add only positive numbers
-given_list2 = [5,4,4,3,1,-2,-3,-5]
-total4 = 0
-for element in given_list2:
-    if element <= 0:
-        break
-    total4 += element
-print(total4)
-
-#using break statement in while loops
-given_list3 = [5,4,4,3,1,-2,-3,-5]
-total9 = 0
-i = 0
-while True:
-    total9 += given_list3[i]
-    i += 1
-    if given_list3[i] <= 0:
-        break
-print(total9)
 
 #exercise for while loops: calculate sum of negative numbers
 
