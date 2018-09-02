@@ -93,19 +93,36 @@ ANOTHER WAY TO DO IT IS:
         if i % 3 == 0:
             total1 += i
     print(total1)
+ANOTHER WAY TO DO IT IS: 
+### code
+    total2 = 0
+    for i in range(1,100):
+        if i % 5 == 0:
+            total2 += i
+    print(total2)
 
+    totalToSub = 1683
+    for i in range(1,100):
+        if i % (3 * 5) == 0:
+            totalToSub += i
+    print(totalToSub)
 
-total2 = 0
-for i in range(1,100):
-    if i % 5 == 0:
-        total2 += i
-print(total2)
+*Exercise 5.14: Looping over a sequence in reverse.*
+Example 1- print names in normal and then reverse order.
+### code
+    names = [
+        'Biffle',
+        'Bowyer', 
+        'Busch',
+        'Gordon',
+        'Patrick'
+    ]
+    for name in names:
+        print(name, '|', end=' ')
+    print('\nPrinting in reverse:')
+    for name in reversed(names):
+        print(name, '|', end=' ')
 
-totalToSub = 1683
-for i in range(1,100):
-    if i % (3 * 5) == 0:
-        totalToSub += i
-print(totalToSub)
 
 ## WHILE LOOPS
 While loops use when you don't know how many loops you need beforehand. If the loop expression is True, then the indented code block is executed and the loops goes back to the beggining while loop statement. Then, the loop is executed again if the while loop statement remains true. If the statement is false, the  then execution instead proceeds to below the loop body.
