@@ -124,14 +124,14 @@ Example 1- print names in normal and then reverse order.
         
 *5.15 Counting using the range() function.*
 
-1. range(5)	= 0 1 2 3 4 #Every integer from 0 to 4.
-2. range(0, 5) = 0 1 2 3 4 #Every integer from 0 to 4.
-3. range(3, 7) = 3 4 5 6 #Every integer from 3 to 6.
-4. range(10, 13) = 10 11 12 #Every integer from 10 to 12.
-5. range(0, 5, 1) = 0 1 2 3 4 #Every 1 integers from 0 to 4.
-6. range(0, 5, 2) = 0 2 4 #Every 2 integers from 0 to 4.
-7. range(5, 0, -1) = 5 4 3 2 1 #Every 1 integers from 5 down to 1
-8. range(5, 0, -2) = 5 3 1 #Every 2 integers from 5 down to 1
+1. range(5)	= 0 1 2 3 4                    #Every integer from 0 to 4.
+2. range(0, 5) = 0 1 2 3 4                 #Every integer from 0 to 4.
+3. range(3, 7) = 3 4 5 6                   #Every integer from 3 to 6.
+4. range(10, 13) = 10 11 12                #Every integer from 10 to 12.
+5. range(0, 5, 1) = 0 1 2 3 4              #Every 1 integers from 0 to 4.
+6. range(0, 5, 2) = 0 2 4                  #Every 2 integers from 0 to 4.
+7. range(5, 0, -1) = 5 4 3 2 1             #Every 1 integers from 5 down to 1.
+8. range(5, 0, -2) = 5 3 1                 #Every 2 integers from 5 down to 1.
 
 
 ## WHILE LOOPS
