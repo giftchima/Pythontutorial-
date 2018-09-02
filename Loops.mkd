@@ -6,7 +6,7 @@ This chapter is an introduction to loops. Loops are used to run codes in a conti
 ## For loops 
 For Loops are used when you want to run a loop for a specific duration. 
 
-Exercise 5.11: Print each individual element in the list
+*Exercise 5.11: Print each individual element in the list
 
 Example 1 -
 ### code 
@@ -21,7 +21,8 @@ Example 2 -
         print (element)
         print (element)
 
-Exercise 5.12: Find the sum of a list
+*Exercise 5.12: Find the sum of a list
+Example 1
 ### code
     b = [3,10,-1]
     total = 0
@@ -78,14 +79,38 @@ for i in range(1,100):
         totalToSub += i
 print(totalToSub)
 
-#using while loops : use when you don't know how many loops you need beforehand
+## while loops
+While loops use when you don't know how many loops you need beforehand. If the loop expression is True, then the indented code block is executed and the loops goes back to the beggining while loop statement. Then, the loop is executed again if the while loop statement remains true. If the statement is false, the  then execution instead proceeds to below the loop body.
 
-total6= 0
-j = 1
-while j < 5:
-    total6 += j
-print(total6)
+*Exercise 5. - Find total of (1 to 4)
 
+Example 1 -
+
+### code
+    total6= 0
+    j = 1
+    while j < 5:
+        total6 += j
+    print(total6)
+*Exercise 5. - Draw a face using symbols
+
+Example 1 -
+### code
+    nose = '0'  # Looks a little like a nose
+    user_value = '-'
+
+    while user_value != 'q':
+        print(' %s %s ' % (user_value, user_value))  # Print eyes
+        print('  %s  ' % nose)  # Print nose
+        print(user_value*5)  # Print mouth
+        print('\n')
+
+        # Get new character for eyes and mouth
+        user_input = input("Enter a character ('q' for quit): ")
+        user_value = user_input[0]
+
+    print('Goodbye.\n')
+    
 given_list = [5,4,4,3,1,-2,-3,-5]  #find sum of only postive numbers
 
 total7 = 0
@@ -206,4 +231,3 @@ for value in [9,41,12,3,74,15]:
     elif value < smallest:
         smallest = value
     print(smallest, value)
-print('AFTER', smallest)
