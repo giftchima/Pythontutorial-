@@ -4,7 +4,7 @@ Introduction to Loops
 This chapter is an introduction to loops. Loops are used to run codes in a continous cyle as long as the condition is true
 
 ## FOR LOOPS 
-For Loops are used when you want to run a loop for a specific duration. 
+For Loops are used when you want to run a loop for a specific duration. A for loop statement loops over each element in a container one at a time, assigning the next element to a variable that can then be used in the loop body.
 
 *Exercise 5.11: Print each individual element in the list*
 
@@ -91,7 +91,7 @@ Example 1 -
     while j < 5:
         total6 += j
     print(total6)
- *Exercise 5. - Find sum of only the postive number of the given list of numbers. 
+ *Exercise 5. - Find sum of only the postive number of the given list of numbers. *
  
  Example 1 - 
  ### code
@@ -138,6 +138,7 @@ In order to count with loops, you can use a variable to count the number of iter
                 i = i + 1
                 
 *Exercise 5. - Write a program that prints the U.S. presidential election years from 1792 to present day, knowing that such elections occur every 4 years.*
+
 Example 1 -
 ### code
     year = 1792
