@@ -20,6 +20,31 @@ Example 2 -
     for element in a:
         print (element)
         print (element)
+Example 3 - Printing out list from dictionaries
+### code
+    channels = {
+        'MTV': 35,
+        'CNN': 28,
+        'FOX': 11,
+        'NBC': 4,
+        'CBS': 12
+    }
+
+    for c in channels:
+        print('%s is on channel %d' % (c, channels[c]))
+OUTPUT:
+- MTV is on channel 35
+- CNN is on channel 28
+- FOX is on channel 11
+- NBC is on channel 4
+- CBS is on channel 12
+
+Example 4 - Use a for loop to access each character of a string.
+### code
+    my_str = ''
+    for character in "Take me to the moon.":
+        my_str += character + '_'
+    print(my_str)
 
 *Exercise 5.12: Find the sum of a list*
 Example 1
@@ -30,41 +55,44 @@ Example 1
         total = total + element
     print (total)
 
-Example to find range of numbers
-range(1,5) #find the range of numbers from 1 to 5 not including 5
-print (range(1,5))
-c = list (range(1,5)) #to convert to a list
-print (c)
+* Exercise 5.13: *
+Example 1 -Example to find range of numbers
+### code
+    range(1,5) #find the range of numbers from 1 to 5 not including 5
+    print (range(1,5))
+    c = list (range(1,5)) #to convert to a list
+    print (c)
+Example 2 : Find  total of range of numbers
+### code
+    total1= 0
+    for element in range(1,5):
+        total1= total1 + element # shortcut is total1 += element
+    print(total1)
 
-#example 1
-total1= 0
-for element in range(1,5):
-    total1= total1 + element # shortcut is total1 += element
-print(total1)
-
-#example 2
-print(list(range(1,8)))
-total2 = 0
-for element in range(1,8):
-    if element % 3 == 0:
-        total2= total2+ element  #module operator to get remainder of division use %
-print(total2)
-
-#example 3 - can you compute all multiples of 3,5 that are less than 100?
-
-total3 =0
-for element in range(1,100):
-    if element % 3 == 0:
-        total3= total3 + element
-    elif element % 5 == 0:
-        total3= total3 + element
-print(total3)
- #or
-total1 = 0
-for i in range(1,100):
-    if i % 3 == 0:
-        total1 += i
-print(total1)
+Example 3: Find total of number within 1-8 and add only if number is divisible by 3
+### code
+    print(list(range(1,8)))
+    total2 = 0
+    for element in range(1,8):
+        if element % 3 == 0:
+            total2= total2+ element  #module operator to get remainder of division use %
+    print(total2)
+Example 4 - Can you compute all multiples of 3,5 that are less than 100?
+### code
+    total3 =0
+    for element in range(1,100):
+        if element % 3 == 0:
+            total3= total3 + element
+        elif element % 5 == 0:
+            total3= total3 + element
+    print(total3)
+ANOTHER WAY TO DO IT IS: 
+### code
+    total1 = 0
+    for i in range(1,100):
+        if i % 3 == 0:
+            total1 += i
+    print(total1)
 
 
 total2 = 0
