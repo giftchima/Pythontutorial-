@@ -121,7 +121,7 @@ Example 1- print names in normal and then reverse order.
     print('\nPrinting in reverse:')
     for name in reversed(names):
         print(name, '|', end=' ')
-        
+
 *5.15 Counting using the range() function.*
 
 1. range(5)	= 0 1 2 3 4 .......                   #Every integer from 0 to 4.
@@ -133,11 +133,30 @@ Example 1- print names in normal and then reverse order.
 7. range(5, 0, -1) = 5 4 3 2 1  ........           #Every 1 integers from 5 down to 1.
 8. range(5, 0, -2) = 5 3 1  .........               #Every 2 integers from 5 down to 1.
 
+*5.16 Using nested loops.*
+
+Example 1 - Two-letter domain name printing program.
+
+Note that ord() and chr() convert between text and the ASCII or Unicode encoding:
+-  ord('a') yields the encoded value of 'a', the number 97.
+-  ord('a')+1 adds 1 to the encoded value of 'a', giving 98.
+-  chr(ord('a')+1) converts 98 back into a letter, producing 'b'
+### code
+    print('Two-letter domain names:')
+
+    letter1 = 'a'
+    letter2 = '?'
+    while letter1 <= 'z':  # Outer loop
+        letter2 = 'a'
+        while letter2 <= 'z':  # Inner loop
+            print('%s%s.com' % (letter1, letter2))
+            letter2 = chr(ord(letter2) + 1)
+        letter1 = chr(ord(letter1) + 1)
 
 ## WHILE LOOPS
 While loops use when you don't know how many loops you need beforehand. If the loop expression is True, then the indented code block is executed and the loops goes back to the beggining while loop statement. Then, the loop is executed again if the while loop statement remains true. If the statement is false, the  then execution instead proceeds to below the loop body.
 
-*Exercise 5. - Find total of (1 to 4).*
+*Exercise 5.21 - Find total of (1 to 4).*
 
 Example 1 -
 ### code
@@ -146,7 +165,7 @@ Example 1 -
     while j < 5:
         total6 += j
     print(total6)
- *Exercise 5. - Find sum of only the postive number of the given list of numbers. *
+ *Exercise 5.22 - Find sum of only the postive number of the given list of numbers. *
  
  Example 1 - 
  ### code
@@ -167,7 +186,7 @@ Example 2 - You don't have a negative number so the loop will be infinite. There
         i += 1
     print(total8)
     
-*Exercise 5. - Draw a face using symbols*
+*Exercise 5.23 - Draw a face using symbols*
 
 Example 1 -
 ### code
@@ -192,7 +211,7 @@ In order to count with loops, you can use a variable to count the number of iter
             while i <=10:
                 i = i + 1
                 
-*Exercise 5. - Write a program that prints the U.S. presidential election years from 1792 to present day, knowing that such elections occur every 4 years.*
+*Exercise 5.24 - Write a program that prints the U.S. presidential election years from 1792 to present day, knowing that such elections occur every 4 years.*
 
 Example 1 -
 ### code
@@ -202,7 +221,7 @@ Example 1 -
         year = year + 4
         print(year)
 ### USING BREAK AND CONTINUE IN LOOPS
-*Exerise 5. - *
+*Exerise 5.25 - *
 
 Example 1 -Use break statement in while loops.
 ### code
