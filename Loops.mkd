@@ -39,7 +39,14 @@ OUTPUT:
 - NBC is on channel 4
 - CBS is on channel 12
 
-Example 4 - Use a for loop to access each character of a string.
+Example 4 - 
+### code
+    friends = ['Joseph', 'Glenn', 'Jola', 'Gift', 'Bryan']
+    for friend in friends:
+        print('Merry Christmas:', friend)
+    print(friends[2],'love you')
+
+Example 5 - Use a for loop to access each character of a string.
 ### code
     my_str = ''
     for character in "Take me to the moon.":
@@ -106,6 +113,17 @@ ANOTHER WAY TO DO IT IS:
             totalToSub += i
     print(totalToSub)
 
+Example 5 - Finding the smallest value
+### code 
+    smallest = None #not a string but a special type
+    print('Before')
+    for value in [9,41,12,3,74,15]:
+        if smallest is None:     # is stronger than ==, demands equality in type and value of variable
+            smallest = value     # use is only on boolean and None type
+        elif value < smallest:
+            smallest = value
+        print(smallest, value)
+
 *Exercise 5.14: Looping over a sequence in reverse.*
 Example 1- print names in normal and then reverse order.
 ### code
@@ -134,6 +152,11 @@ Example 1- print names in normal and then reverse order.
 8. range(5, 0, -2) = 5 3 1  .........               #Every 2 integers from 5 down to 1.
 
 *5.16 Using nested loops.*
+
+TIPS:
+1. You need to use a nested for loop. Use the range() builtin to produce an iterable sequence.
+
+2. The outer for loop should iterate over the number of rows. The inner (nested) for loop should iterate over the columns.
 
 Example 1 - Two-letter domain name printing program.
 
@@ -185,6 +208,28 @@ Example 2 - You don't have a negative number so the loop will be infinite. There
         total8+= given_list1[i]
         i += 1
     print(total8)
+Example 3 - Calculate sum of negative numbers
+### code
+
+    given_list4= [7,5,4,4,3,1,-2,-3,-5,-7]
+    total10= 0
+    for element in given_list4:
+        if element >= 0:
+            print('null')
+        elif element <=0:
+            total10 += element
+    print(total10)
+ANOTHER WAY TO DO IT
+### code
+    given_list = [7, 5, 4, 4, 3, 1, -2, -3, -5, -7]
+    total = 0
+    i = 0
+
+    while i < len(given_list):
+        if given_list[i] <= 0:
+            total += given_list[i]
+        i += 1
+    print (total)
     
 *Exercise 5.23 - Draw a face using symbols*
 
@@ -220,7 +265,9 @@ Example 1 -
     while year <= current_year:
         year = year + 4
         print(year)
-### USING BREAK AND CONTINUE IN LOOPS
+### USING BREAK AND CONTINUE IN LOOPS 
+A break statement in a loop causes an immediate exit of the loop.
+
 *Exerise 5.25 - *
 
 Example 1 -Use break statement in while loops.
@@ -245,89 +292,40 @@ Example 2 - Use a break statement to add only positive numbers.
         total4 += element
     print(total4)
 
+Example 3 - Using nested loops and break statement to find how many meals you can purchase with certain amount of money.
+### code
+    empanada_cost = 3
+    taco_cost = 4
+    user_money = int(input('Enter money for meal: '))
 
+    max_empanadas = user_money // empanada_cost
+    max_tacos = user_money // taco_cost
 
-#exercise for while loops: calculate sum of negative numbers
+    meal_cost = 0
+    for num_tacos in range(max_tacos + 1):
+        for num_empanadas in range(max_empanadas + 1):
+            meal_cost = (num_empanadas * empanada_cost) + (num_tacos * taco_cost)
 
-given_list4= [7,5,4,4,3,1,-2,-3,-5,-7]
-total10= 0
-for element in given_list4:
-    if element >= 0:
-        print('null')
-    elif element <=0:
-        total10 += element
-print(total10)
+            # Find first meal option that exactly matches user money
+            if meal_cost == user_money:
+                break
 
-# using while loop:
+        # Find first meal option that exactly matches user money
+        if meal_cost == user_money:
+            break
 
-given_list = [7, 5, 4, 4, 3, 1, -2, -3, -5, -7]
-total = 0
-i = 0
+    if meal_cost == user_money:
+        print('$%d buys %d empanadas and %d tacos without change.' %
+        (meal_cost, num_empanadas, num_tacos))
+    else:
+        print('You cannot buy a meal without having change left over.')
 
-while i < len(given_list):
-    if given_list[i] <= 0:
-        total += given_list[i]
-    i += 1
-
-print (total)
-#Python for Everyone
-
-n = 5
-while n > 0:
-    print(n)
-    n=n-1
-print('Blastoff')
-
-#breaking out of a loop: break statement ends the current
-#loop and jumps to the statement immediately following the loopself.
-#look at py4e on youtube
-while True:
-    line == input('>')
-
-#continue stament ends the current iteration and jumps to the top
-#of the loop and starts the next iteration
-
-while True:
-    line ==input('>')
-    if line[0]=='#':
-        continue
-    if line == 'done'
-
-#definite loop
-
-for i in [5,4,3,2,1] :
-    print(i)
-print('Blastoff')
-
-friends = ['Joseph', 'Glenn', 'Jola', 'Gift', 'Bryan']
-for friend in friends:
-    print('Merry Christmas:', friend)
-print(friends[2],'love you')
-
-#loop patternsm:counting in a loop: to find total or sum
-
-zork = 0
-print('Before, zork')
-for thing in [9,42,56]:
-    zork = zork + thing
-    print(zork, thing)
-print('after',zork)
-
-#USING A BOOLEAN VALUE
-found = False
-print('Before', found)
-for value in [9,4,42,3,74]:
-    if value ==3:
-        found == True
-    print('found', value)
-print('After',found)
-
-#FINDING THE SMALLEST value
-smallest = None #not a string but a special type
-print('Before')
-for value in [9,41,12,3,74,15]:
-    if smallest is None:     # is stronger than ==, demands equality in type and value of variable
-        smallest = value     # use is only on boolean and None type
-    elif value < smallest:
-        smallest = value
-    print(smallest, value)
+### Continue Statement: 
+This ends the current iteration and jumps to the top of the loop and starts the next iteration.
+Example 1 -
+### code 
+    while True:
+        line ==input('>')
+        if line[0]=='#':
+            continue
+        if line == 'done'
