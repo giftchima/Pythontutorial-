@@ -329,3 +329,42 @@ Example 1 -
         if line[0]=='#':
             continue
         if line == 'done'
+ ### LOOP WITH ELSE
+ A loop may optionally include an else clause that executes only if the loop terminates normally, not using a break statement. The loop else construct provides a programmer with the ability to perform some action if the loop completes normally.
+*For While loop* :
+
+while expression:  # Loop expression
+    # Loop body: Sub-statements to execute if 
+    # the expression evaluated to True
+else:
+    # Else body: Sub-statements to execute once 
+    # if the expression evaluated to False
+#Statements to execute after the loop
+
+*For loop else.* :
+
+for name in iterable:
+    # Loop body: Sub-statements to execute 
+    # for each item in iterable
+else:
+    # Else body: Sub-statements to execute 
+    # once when loop completes
+#Statements to execute after the loop
+
+Example 1 -
+### code 
+    names = ['Janice', 'Clarice', 'Martin', 'Veronica', 'Jason']
+    num = int(input('Enter number of names to print: '))
+    for i in range(len(names)):
+        if i == num:
+            break
+        print(names[i], end= ' ')
+    else:
+        print('All names printed.')
+ OUTPUT:
+Enter number of names to print: 2
+Janice Clarice
+...
+Enter number of names to print: 8
+Janice Clarice Martin Veronica Jason 
+All names printed.
