@@ -151,7 +151,7 @@ Example 1- print names in normal and then reverse order.
 7. range(5, 0, -1) = 5 4 3 2 1  ........           #Every 1 integers from 5 down to 1.
 8. range(5, 0, -2) = 5 3 1  .........               #Every 2 integers from 5 down to 1.
 
-## Nested loops
+## NESTED LOOPS
 
 TIPS:
 1. You need to use a nested for loop. Use the range() builtin to produce an iterable sequence.
@@ -329,7 +329,7 @@ Example 1 -
         if line[0]=='#':
             continue
         if line == 'done'
- ### LOOP WITH ELSE
+ ## LOOP WITH ELSE
  A loop may optionally include an else clause that executes only if the loop terminates normally, not using a break statement. The loop else construct provides a programmer with the ability to perform some action if the loop completes normally.
 *For While loop* :
 
@@ -362,9 +362,9 @@ Example 1 -
     else:
         print('All names printed.')
  OUTPUT:
-Enter number of names to print: 2
-Janice Clarice
-...
-Enter number of names to print: 8
-Janice Clarice Martin Veronica Jason 
-All names printed.
+1. Enter number of names to print: 2
+2. Janice Clarice
+3. ...
+4. Enter number of names to print: 8
+5. Janice Clarice Martin Veronica Jason 
+6. All names printed.
