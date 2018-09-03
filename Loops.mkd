@@ -151,7 +151,7 @@ Example 1- print names in normal and then reverse order.
 7. range(5, 0, -1) = 5 4 3 2 1  ........           #Every 1 integers from 5 down to 1.
 8. range(5, 0, -2) = 5 3 1  .........               #Every 2 integers from 5 down to 1.
 
-*5.16 Using nested loops.*
+## Nested loops
 
 TIPS:
 1. You need to use a nested for loop. Use the range() builtin to produce an iterable sequence.
@@ -265,7 +265,7 @@ Example 1 -
     while year <= current_year:
         year = year + 4
         print(year)
-### USING BREAK AND CONTINUE IN LOOPS 
+## USING BREAK AND CONTINUE IN LOOPS 
 A break statement in a loop causes an immediate exit of the loop.
 
 *Exerise 5.25 - *
@@ -320,7 +320,7 @@ Example 3 - Using nested loops and break statement to find how many meals you ca
     else:
         print('You cannot buy a meal without having change left over.')
 
-### Continue Statement: 
+## Continue Statement: 
 This ends the current iteration and jumps to the top of the loop and starts the next iteration.
 Example 1 -
 ### code 
