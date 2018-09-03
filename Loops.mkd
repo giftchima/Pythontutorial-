@@ -62,7 +62,7 @@ Example 1
         total = total + element
     print (total)
 
-* Exercise 5.13: *
+*Exercise 5.13: *
 Example 1 -Example to find range of numbers
 ### code
     range(1,5) #find the range of numbers from 1 to 5 not including 5
