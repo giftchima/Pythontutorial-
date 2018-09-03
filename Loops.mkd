@@ -320,7 +320,7 @@ Example 3 - Using nested loops and break statement to find how many meals you ca
     else:
         print('You cannot buy a meal without having change left over.')
 
-## Continue Statement: 
+### CONTINUE STATEMENT: 
 This ends the current iteration and jumps to the top of the loop and starts the next iteration.
 Example 1 -
 ### code 
