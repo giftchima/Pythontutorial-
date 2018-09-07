@@ -27,3 +27,19 @@ Functions are used to utilize code in more than one place in a program. The only
         print_lyrics()
         print_lyrics()
     print(repeat_lyrics())
+
+## PARAMETERS AND ARGUEMENTS
+A parameter is a variable in a method definition. When a method is called, the arguments are the data you pass into the method's parameters. Parameter is variable in the declaration of function. In other words, parameters are the names listed in the function definition.
+
+Function arguments are the real values received by the function when it is invoked. It is the actual value of this variable that gets passed to function.
+
+*Example 1:
+### code
+    def print_twice(bruce):
+        print(bruce)
+        print(bruce)
+    print (print_twice('spam'))
+    print (print_twice('Spam' *4))
+
+    michael = 'Eric, the half a bee.'
+    print (print_twice(michael))
