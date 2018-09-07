@@ -368,3 +368,30 @@ Example 1 -
 4. Enter number of names to print: 8
 5. Janice Clarice Martin Veronica Jason 
 6. All names printed.
+
+## Getting both index and value when looping: enumerate()
+
+-Using range() and len() to iterate over a sequence.
+### code
+    origins = [4, 8, 10]
+
+    for index in range(len(origins)):
+        value = origins[index]  # Retrieve value of element in list.
+        print('Element %d: %s' % (index, value))
+- Using list.index() to find the index of each element.
+### code
+    origins = [4, 8, 10]
+
+    for value in origins:
+        index = origins.index(value)  # Retrieve index of value in list
+        print('Element %d: %s' % (index, value))
+ - Using The enumerate() function.
+ ### code
+    origins = [4, 8, 10]
+
+    for (index, value) in enumerate(origins):
+        print('Element %d: %s' % (index, value))
+ OUTPUT FOR ALL:
+ Element 0: 4
+ Element 1: 8
+ Element 2: 10
