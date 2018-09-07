@@ -5,6 +5,7 @@ Functions are used to utilize code in more than one place in a program. The only
 - Function call:  causes the function's statements to execute.
 - Function definition: consists of the def keyword, the new function's name, and a block of statements. ex) def x ():  
 - Function return:  causes execution to jump back to the original call and return to the next statement after the call.
+
 *Example of a function pritng a face with o's* 
 ### code 
     def print_face():
@@ -15,3 +16,14 @@ Functions are used to utilize code in more than one place in a program. The only
         return
 
     print_face()
+ *Example 2: Another function - function in a function.*
+ ### code
+    def print_lyrics():
+        print("I'm a lumberjack, and I'm okay.")
+        print("I sleep all night and I work all day.")
+    print(print_lyrics())
+
+    def repeat_lyrics():
+        print_lyrics()
+        print_lyrics()
+    print(repeat_lyrics())
