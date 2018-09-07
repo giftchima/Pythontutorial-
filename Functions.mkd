@@ -1,1 +1,17 @@
-# Introduction_to_functions
+# Introduction to functions
+
+Functions are used to utilize code in more than one place in a program. The only way without functions to reuse code consists in copying the code. Functions are a convenient way to divide your code into useful blocks, allowing us to order our code, make it more readable, reuse it and save some time.  - Source (https://www.learnpython.org/en/Functions)
+
+- Function call:  causes the function's statements to execute.
+- Function definition: consists of the def keyword, the new function's name, and a block of statements. ex) def x ():  
+- Function return:  causes execution to jump back to the original call and return to the next statement after the call.
+*Example of a function pritng a face with o's* 
+### code 
+    def print_face():
+        face_char = 'o'
+        print('  ', face_char, ' ', face_char)  # Print eyes
+        print('    ', face_char)                # Print nose
+        print('  ', face_char*5)                # Print mouth
+        return
+
+    print_face()
