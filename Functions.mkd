@@ -33,7 +33,7 @@ A parameter is a variable in a method definition. When a method is called, the a
 
 Function arguments are the real values received by the function when it is invoked. It is the actual value of this variable that gets passed to function.
 
-*Example 1:
+*Example 1:*
 ### code
     def print_twice(bruce):
         print(bruce)
@@ -43,3 +43,24 @@ Function arguments are the real values received by the function when it is invok
 
     michael = 'Eric, the half a bee.'
     print (print_twice(michael))
+    
+*Example 2: multiple parameters*
+### code
+    def print_face(eye, face_char):
+
+       print('  ', eye, ' ', eye)  # Print eyes
+       print('    ', face_char)    # Print nose
+       print('  ', face_char*5)    # Print mouth
+       return
+
+    print_face('o', 'x')
+    
+ *Example 3: Using return statement to get a value*
+ ### code
+     def compute_square(num_to_square):
+         return num_to_square * num_to_square
+
+     num_squared = 0
+     num_squared = compute_square(7)
+
+     print('7 squared is', num_squared)
