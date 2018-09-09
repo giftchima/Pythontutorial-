@@ -56,6 +56,7 @@ Function arguments are the real values received by the function when it is invok
     print_face('o', 'x')
     
  *Example 3: Using return statement to get a value*
+ NOTE: Function can only return one value or item.
  ### code
      def compute_square(num_to_square):
          return num_to_square * num_to_square
