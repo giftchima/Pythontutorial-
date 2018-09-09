@@ -65,3 +65,165 @@ Function arguments are the real values received by the function when it is invok
      num_squared = compute_square(7)
 
      print('7 squared is', num_squared)
+
+#################
+STUFF TO EDIT
+
+
+# using the import statement to do math
+import math
+degrees = 45
+radians = degrees / 180.0 * math.pi
+print (math.sin(radians))
+
+#adding a new function
+
+def print_lyrics():
+    print("I'm a lumberjack, and I'm okay.")
+    print("I sleep all night and I work all day.")
+    return
+print(print_lyrics())
+
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+    return
+
+print(repeat_lyrics())
+
+
+#parameters and arguements
+
+def print_twice(bruce):
+    print(bruce)
+    print(bruce)
+print (print_twice('spam'))
+print (print_twice('Spam' *4))
+
+michael = 'Eric, the half a bee.'
+print (print_twice(michael))
+
+
+
+def cat_twice(part1, part2):
+    cat = part1 + part2
+    print_twice(cat)
+
+line1 = 'Bing tiddle'
+line2 = 'tiddle bang.'
+print (cat_twice(line1, line2))
+
+#void functions
+result = print_twice('Bing')
+
+print(result)
+ # you will get a special value called none
+
+def function2(x):
+     return 2*x
+print (function2(2))
+
+def function3(x,y):
+    return x+y
+
+e = function3(1,5)
+print (e)
+
+
+#3.1 exercise : Write a function named right_justify that takes a string named s as a parameter
+#and prints the string with enough leading spaces so that the last letter of the string is in column
+#70 of the display.
+def right_justify(s):
+    print "%70s" % s
+print((right_justify('s')))
+
+#or
+def right_justify(s):
+         print((70-len(s))*' '+s)
+print((right_justify('s')))
+#this will 1.Find out how long your string is (hint: len()).
+           #2.Find out how many spaces you need to print (hint: if your string is 5 characters and
+           #he total length should be 70, you want to print 65 spaces).
+           #3.Print the spaces.
+           #4.Print the string.
+
+#or
+def right_justify(s):
+    length=len(s)
+    spaces=70-length
+    print (' ' * spaces) + s
+
+print(right_justify('s'))
+
+#Exercise 3.2. A function object is a value you can assign to a variable or pass as an argument. For
+#example, do_twice is a function that takes a function object as an argument and calls it twice:
+#make it call the function 4 times with only two arguements in the body
+def do_twice(f):
+    f()
+    f()
+
+def print_spam():
+    print('spam')
+
+print (do_twice(print_spam))
+
+#or
+def do_twice(f):
+    print(f)
+    print(f)
+print(do_twice('spam'))
+
+#answer
+def do_twice(f):
+    f()
+    f()
+
+def print_spam():
+    print('spam')
+    print('spam')
+
+print (do_twice(print_spam))
+
+def hello_func(greeting, name='You'):
+    return '{},{}'.format(greeting, name)
+print (hello_func('Hi', name = 'Gift'))
+
+#How to use args and kwargs
+
+def student_info(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+print(student_info('Math', 'Art', name='John', age = 22))
+
+#or
+courses = ['Math','Art']
+info = {'name': 'John', 'age': 22}
+print student_info(*courses, **info)
+
+
+
+# how to use the % sign in  Python
+print "I own %s computers but I seldom use more than %s at a time." % (10, 3)
+
+#exercise 3.3 Write a function that draws a grid like the following:
+
+def do_Func(f, val, iter):
+    i=0
+    while i < iter:
+        f(val)
+        i=i+1
+
+def printer(val):
+    print val
+
+# Create Grid
+
+colCell = '+ - - - - + - - - - +'
+rowCell = '|         |         |'
+
+print(do_Func(printer, colCell, 1))
+print (do_Func(printer, rowCell, 4))
+print (do_Func(printer, colCell, 1))
+print(do_Func(printer, rowCell, 4))
+print (do_Func(printer, colCell, 1))
