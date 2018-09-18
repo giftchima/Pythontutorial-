@@ -1,4 +1,6 @@
-# Strings are a sequence type, having characters ordered by position from left to right. They are immutable.
+# Introduction to Strings 
+
+Strings are a sequence type, having characters ordered by position from left to right. They are immutable.
 You can read individual characters of a string using brackets and indexes. ex x = 'goat, print(x[1]) ---> o
 
 ## String slicing
