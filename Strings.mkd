@@ -141,3 +141,30 @@ Methods to check a string value that returns a True or False Boolean value:
 - isspace()-- Return True if all characters are whitespace.
 - startswith(x)-- Return True if the string starts with x.
 - endswith(x)--Return True if the string ends with x.
+- capitalize()-- Returns a copy of the string with first character capitalized and the rest lowercased.
+- lower()-- Returns a copy of the string with all characters lowercased.
+- upper()-- Returns a copy of the string with all characters uppercased.
+- strip()-- Returns a copy of the string with leading and trailing whitespace removed.
+- title()-- Returns a copy of the string as a title, with first letters of words capitalized.
+
+## Splitting and joining strings
+
+example 1.
+### code
+    url = input('Enter URL:\n')
+    tokens = url.split('/')  # Uses '/' separator
+    print(tokens)
+
+### Joining
+The join() method performs the inverse operation of split() by joining a list of strings together to create a single string.
+
+ex) The statement my_str = '@'.join(['billgates', 'microsoft']) ---> 'billgates@microsoft'. 
+ex2) ''.join(['http://', 'www.', 'ebay', '.com']) produces the string 'http://www.ebay.com'
+
+### code
+    phrases = ['To be, ', 'or not to be.\n', 'That is the question.']
+    sentence = ''.join(phrases)
+    print(sentence)
+  OUTPUT
+   To be, or not to be.
+That is the question.
