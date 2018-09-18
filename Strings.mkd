@@ -4,14 +4,14 @@ Strings are a sequence type, having characters ordered by position from left to 
 You can read individual characters of a string using brackets and indexes. ex x = 'goat, print(x[1]) ---> o
 
 ## String slicing
-Example 1:
+*Example 1:*
 ### code
     my_str = 'The cat in the hat'
     print(my_str[0:3])
 ### code
     my_str = 'The cat in the hat'
     print(my_str[3:7])
-Example 2: Use slicing to create a new object
+*Example 2: Use slicing to create a new object*
 ### code
     my_str = "The cat jumped the brown cow"
     animal = my_str[4:7]
@@ -19,3 +19,30 @@ Example 2: Use slicing to create a new object
 
     my_str = 'The fox jumped the brown llama'
     print('The animal is still a', animal)  # animal variable remains unchanged.
+    
+NOTE: my_str[:5] reads positions 0-4. Similarly, omitting end yields the characters from start to the end of the string: my_str[5:] yields all characters at and after position 5.
+
+*Example 3: Find the first half and second half of a string.*
+ ### code
+    usr_text = input('Enter a string:\n')
+
+    first_half = usr_text[:len(usr_text)//2]
+    last_half = usr_text[len(usr_text)//2:]
+
+    print('The first half of the string is "%s"' % first_half)
+    print('The second half of the string is "%s"' % last_half)
+### String Stride 
+The stride determines how much to increment the index after reading each element. For example, my_str[0:10:2] reads every other element between 0 and 10.
+
+### code
+    numbers = '0123456789'
+
+    print('All numbers: %s' % numbers[::])
+    print('Every other number: %s' % numbers[::2])
+    print('Every third number between 1 and 8: %s' % numbers[1:9:3])
+
+OUTPUT 
+
+All numbers: 0123456789
+Every other number: 02468
+Every third number between 1 and 8: 147
