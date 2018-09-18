@@ -46,3 +46,72 @@ OUTPUT
 All numbers: 0123456789
 Every other number: 02468
 Every third number between 1 and 8: 147
+
+## Advanced string formatting
+
+Example of conversion specifier
+
+'%s: %f North, %f East' % ('Tokyo', 35.6, 140.8)
+
+'%s: %d North, %d East' % ('Tokyo', 35.6, 140.8)
+
+OUTPUT 1:'Tokyo: 35.600000 North, 140.800000 East'
+OUTPUT 2: 'Tokyo: 35 North, 140 East'
+
+ Example1: String formatting example: Add leading 0s by setting the minimum field width and 0 conversion flag.
+ ### code
+    student_id = int(input('Enter student ID: '))
+
+    print('The user entered %d' % student_id)
+    print('Full 8-character student ID: %08d' % student_id)
+OUTPUT:
+Enter student ID: 1234
+The user entered 1234
+Full 8-character student ID: 00001234
+
+NOTE: The optional precision component of a conversion specifier indicates how many digits to the right of the decimal should be included
+ex. '%.1f' % 1.725 indicates a precision of 1, thus the resulting string would be '1.7'
+ex. '%.5f' % 1.5 results in the string '1.50000'.
+
+*Example 1* 
+### code
+
+    import math
+    real_pi = math.pi  # math library provides close approximation of pi
+    approximate_pi = 22.0 / 7.0  # Approximate pi to 2 decimal places
+
+    print('pi is %f.' % real_pi)
+    print('22/7 is %f.' % approximate_pi)
+    print('22/7 is accurate for 2 decimal places: %.2f' % approximate_pi)
+OUTPUT:
+pi is 3.141593.
+22/7 is 3.142857.
+22/7 is accurate for 2 decimal  places: 3.14
+
+### STRING MAPPING: 
+Using a dictionary to place values.
+Example)
+'time: %(hour)d:%(min)02d:%(sec)f' % {'hour':11, 'min':2, 'sec':15.002}
+OUTPUT: 'time: 11:02:15.002000'
+
+### Finding and replacing
+
+A common task for a programmer is to edit the contents of a string. Recall that string objects are immutable -- once created, strings can not be changed. To update a string variable, a new string object must be created and bound to the variable name, replacing the old object. The replace string method provides a simple way to create a new string by replacing all occurrences of a substring with a new substring.
+
+replace(old, new)-- Returns a copy of the string with all occurrences of the substring old replaced by the string new. The old and new arguments may be string variables or string literals.
+replace(old, new, count)-- Same as above, except only replaces the first count occurrences of old.
+
+### Methods for Finding Position of a character in a string
+
+
+- find(x)-- Returns the position of the first occurrence of item x in the string, else returns -1. x may be a string variable or string literal. Recall that in a string the first position is number 0, not 1. If my_str is 'Boo Hoo!':
+- my_str.find('!') # Returns 7
+- my_str.find('Boo') # Returns 0
+- my_str.find('oo') # Returns 1 (first occurrence only)
+- find(x, start)-- Same as above but begins the search at position start:
+- my_str.find('oo', 2) # Returns 5
+- find(x, start, end)-- Same as above but stops the search at position end:
+- my_str.find('oo', 2, 4) # Returns -1 (not found)
+- rfind(x)-- Same as find but searches the string in reverse, returning the last occurrence in the string.
+- count(x)-- Returns the number of times x occurs in the string.
+   my_str.count('oo') # Returns 2
