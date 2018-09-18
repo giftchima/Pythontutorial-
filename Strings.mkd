@@ -168,3 +168,30 @@ ex2) ''.join(['http://', 'www.', 'ebay', '.com']) produces the string 'http://ww
   OUTPUT
    To be, or not to be.
 That is the question.
+
+*Example 2. Splitting and joining: Replacing separators.*
+### code
+    path = input('Enter file name: ')
+
+    new_separator = input('Enter new separator: ')
+    tokens = path.split('/')
+    print(new_separator.join(tokens))
+
+OUTPUT:
+Enter file name: C:/Users/Wolfman/Documents/report.pdf
+Enter new separator: \\
+C:\\Users\\Wolfman\\Documents\\report.pdf
+
+*Example 3*
+### code
+    url = input('Enter Wikipedia URL: ')
+    tokens = url.split('/')
+
+    if 'wiki' !=  tokens[3]:
+        tokens.insert(3, 'wiki')
+        new_url = '/'.join(tokens)
+
+        print('%s not a valid address.' % url)
+        print('Redirecting to %s' % new_url)
+    else:
+        print('Loading %s' % url)
