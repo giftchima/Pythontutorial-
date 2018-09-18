@@ -1,6 +1,19 @@
 # Strings are a sequence type, having characters ordered by position from left to right. They are immutable.
-- You can read individual character is read using brackets and indexes. ex x = 'goat, print(x[1]) ---> o
+You can read individual characters of a string using brackets and indexes. ex x = 'goat, print(x[1]) ---> o
 
 ## String slicing
-my_str = 'The cat in the hat'
-print(my_str[0:3])
+Example 1:
+### code
+    my_str = 'The cat in the hat'
+    print(my_str[0:3])
+### code
+    my_str = 'The cat in the hat'
+    print(my_str[3:7])
+Example 2: Use slicing to create a new object
+### code
+    my_str = "The cat jumped the brown cow"
+    animal = my_str[4:7]
+    print('The animal is a %s' % animal)
+
+    my_str = 'The fox jumped the brown llama'
+    print('The animal is still a', animal)  # animal variable remains unchanged.
