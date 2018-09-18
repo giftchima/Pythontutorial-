@@ -115,3 +115,29 @@ replace(old, new, count)-- Same as above, except only replaces the first count o
 - rfind(x)-- Same as find but searches the string in reverse, returning the last occurrence in the string.
 - count(x)-- Returns the number of times x occurs in the string.
    my_str.count('oo') # Returns 2
+   
+## Comparing strings
+String objects may be compared using relational operators (<, <=, >, >=), equality operators (==, !=), membership operators (in, not in), and identity operators (is, is not). The following provides examples, given my_str is 'Hello', student_name is 'Kay, Jo', and teacher_name is 'Kay, Amy':
+
+my_str == 'Hello' # Evaluates to True
+my_str == 'Hello.' # Evaluates to False
+student_name == teacher_name # Evaluates to False
+student_name > teacher_name # Evaluates to True because 'J' > 'A' is True
+student_name >= teacher_name # Evaluates to True because ">"
+student_name >= 'Kay, Jo' # Evaluates to True because "=="
+student_name != 'Kay, jo' # Evaluates to True because 'J' != 'j'
+'Jo' in student_name # Evaluates to True
+student_name in 'Jo' # Evaluates to False
+student_name is 'Kay, Jo' # Evaluates to False, because 'Kay, Jo' and student name are bound to different objects.
+
+### More string comparisons
+
+Methods to check a string value that returns a True or False Boolean value:
+
+- isalnum()-- Returns True if all characters in the string are lowercase or uppercase letters, or the numbers 0-9.
+- isdigit()-- Returns True if all characters are the numbers 0-9.
+- islower()-- Returns True if all characters are lowercase letters.
+- isupper()-- Return True if all cased characters are uppercase letters.
+- isspace()-- Return True if all characters are whitespace.
+- startswith(x)-- Return True if the string starts with x.
+- endswith(x)--Return True if the string ends with x.
