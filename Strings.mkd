@@ -175,7 +175,7 @@ That is the question.
 
     new_separator = input('Enter new separator: ')
     tokens = path.split('/')
-    print(new_separator.join(tokens))
+    print(new_separator.join(tokens)
 
 OUTPUT:
 Enter file name: C:/Users/Wolfman/Documents/report.pdf
@@ -195,3 +195,18 @@ C:\\Users\\Wolfman\\Documents\\report.pdf
         print('Redirecting to %s' % new_url)
     else:
         print('Loading %s' % url)
+        
+## The string format method
+
+The string format method and % string-formatting syntax behave very similarly, each using value placeholders within a string literal. Each pair of braces {} is a placeholder known as a replacement field . A value from within the format() parentheses will be inserted into the string depending on the contents of a replacement field. 
+
+There are three ways to fill in a replacement field:
+
+1. Positional: An integer that describes the position of the value.
+'The {1} in the {0}'.format('hat','cat') . ----> .  The cat in the hat
+
+2.Inferred positional: Empty {} assumes ordering of replacement fields is {0}, {1}, {2}, etc.
+'The {} in the {}'.format('cat', 'hat') ------> The cat in the hat
+
+3. Named: A name matching a keyword argument
+'The {animal} in the {headwear}'.format(animal='cat', headwear='hat')
