@@ -1,0 +1,6 @@
+# Strings are a sequence type, having characters ordered by position from left to right. They are immutable.
+- You can read individual character is read using brackets and indexes. ex x = 'goat, print(x[1]) ---> o
+
+## String slicing
+my_str = 'The cat in the hat'
+print(my_str[0:3])
