@@ -20,8 +20,8 @@ del my_list[5] = helloworld!
 
 *Example 2
 ### code - In-place modification of a list
-    my_teams = ['Raptors', 'Heat', 'Nets']
-    your_teams = my_teams  # Create a shared reference to same list
+          my_teams = ['Raptors', 'Heat', 'Nets']
+          your_teams = my_teams  # Create a shared reference to same list
 
 	  my_teams[1] = 'Lakers'  # Modify list element
 
@@ -32,13 +32,13 @@ OUTPUT: My teams are: ['Raptors', 'Lakers', 'Nets']
 
 		
 ### code - In-place modification of a copy of a list
-    my_teams = ['Raptors', 'Heat', 'Nets']
+          my_teams = ['Raptors', 'Heat', 'Nets']
 	  your_teams = my_teams[:]  # Assign your teams to a COPY of my_teams
 	
-    my_teams[1] = 'Lakers'  # Modify list element
+          my_teams[1] = 'Lakers'  # Modify list element
 	
 	  print('My teams are:', my_teams)  # List element has changed
-    print('Your teams are:', your_teams)  # List element has not changed
+          print('Your teams are:', your_teams)  # List element has not changed
 OUTPUT: My teams are: ['Raptors', 'Lakers', 'Nets']
         Your teams are: ['Raptors', 'Heat', 'Nets']
 
