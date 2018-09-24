@@ -1,0 +1,3 @@
+ # Introduction to list and Dictionaries
+ 
+ A list is a container, which is an object that groups related objects together. A list is also a sequence; thus, the contained objects maintain a left-to-right positional ordering.
