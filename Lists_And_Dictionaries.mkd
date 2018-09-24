@@ -10,7 +10,7 @@
  2. Through using the python built-in function: list() ex. my_list = list('123') -----> print(my_list)
 
 
-### Modification of a list 
+## Modification of a list 
 
 *Example of modification of a list
 1. my_list  = [ 'h', 'e', 'l', 'l', 'o' ] = hello 
