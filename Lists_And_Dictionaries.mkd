@@ -9,6 +9,28 @@
  1. Through using brackets [].
  2. Through using the python built-in function: list() ex. my_list = list('123') -----> print(my_list)
 
+## Basics of lists
+
+| Left-aligned | Center-aligned | Right-aligned |                |
+| :---         |     :---:      |     :---:     |           ---: |
+| git status   | git status     | git status    |                |
+| git diff     | git diff       | git diff      |                |
+| git status   | git status     | git status    |                |
+| git diff     | git diff       | git diff      |                |
+| git status   | git status     | git status    |                |
+| git diff     | git diff       | git diff      |                |
+| Left-aligned | Center-aligned | Right-aligned |                |
+| :---         |     :---:      |     :---:     |           ---: |
+| git status   | git status     | git status    |                |
+| git diff     | git diff       | git diff      |                |
+| git status   | git status     | git status    |                |
+| git diff     | git diff       | git diff      |                |
+| git status   | git status     | git status    |                |
+| git diff     | git diff       | git diff      |                |
+
+ 
+ 
+ 
 
 ## Modification of a list 
 
