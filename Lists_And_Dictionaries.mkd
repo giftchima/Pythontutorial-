@@ -11,14 +11,14 @@
 
 ## Basics of lists
 
-| Left-aligned | Center-aligned | Right-aligned |                |
-| :---         |     :---:      |     :---:     |           ---: |
-| git status   | git status     | git status    |                |
-| git diff     | git diff       | git diff      |                |
-| git status   | git status     | git status    |                |
-| git diff     | git diff       | git diff      |                |
-| git status   | git status     | git status    |                |
-| git diff     | git diff       | git diff      |                |
+| Left-aligned     | Center-aligned                     |                             Right-aligned |                            
+| :---             |     :---:                          |                  :---:     |           ---:                                           
+|list.append(x)    |Add an item to the end of list.     |                |
+|list.extend([x])  |Add all items in [x] to list.       | git diff      |                                    |
+|list.insert(i, x) |Insert x into list before position i.	    | git status    |                |
+|list.remove(x)    |Remove first item from list with value x.      | git diff      |                |
+|list.pop()        |Remove and return last item in list.     | git status    |                |
+|list.pop(i)       |Remove and return item at position i in list.      | git diff      |                |
 | Left-aligned | Center-aligned | Right-aligned |                |
 | :---         |     :---:      |     :---:     |           ---: |
 | git status   | git status     | git status    |                |
