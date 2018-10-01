@@ -108,3 +108,4 @@ OUTPUT: Coke, Coke_zero, Pepsi
     for soda in num_calories.values():
         print(soda)
 OUTPUT: 90, 0 , 94
+
