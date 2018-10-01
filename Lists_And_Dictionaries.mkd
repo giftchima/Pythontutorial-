@@ -120,3 +120,45 @@ Therefore, you can use list to iterate over many values.*
 
     print('Closest planet is %.4e' % closest)
     print('Second closest planet is %.4e' % next_closest)
+    
+  ### DICTIONARY NESTING
+  You can have a dictionary embedded in another dictionary. 
+  
+  
+  
+  *Example 2: *
+  ### code
+      grades = {
+        'John Ponting': {
+           'Homeworks': [79, 80, 74],
+           'Midterm': 85,
+           'Final': 92 },
+       'Jacques Kallis': {
+           'Homeworks': [90, 92, 65],
+           'Midterm': 87,
+           'Final': 75 },
+        'Ricky Bobby': {
+           'Homeworks': [50, 52, 78],
+           'Midterm': 40,
+           'Final': 65 },}
+
+    user_input = input('Enter student name: ')
+
+    while user_input != 'exit':
+        if user_input in grades:   # Get values from nested dict
+        homeworks = grades[user_input]['Homeworks']
+        midterm = grades[user_input]['Midterm']
+        final = grades[user_input]['Final']
+
+        # print info
+        for hw, score in enumerate(homeworks):
+            print('Homework %d: %d' % (hw, score))
+
+        print('Midterm: %s' % midterm)
+        print('Final: %s' % final)
+
+        # Compute student total score
+        total_points = sum([i for i in homeworks]) + midterm + final
+        print('Final percentage: %f%%' % (100*(total_points / 500.0)))
+
+    user_input = input('Enter student name: ')
