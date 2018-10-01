@@ -1,5 +1,7 @@
  # Introduction to list and Dictionaries
  
+ 
+ ## LISTS
  A list is a container, which is an object that groups related objects together.
  A list is also a sequence that have a left to right positional ordering. Therefore, the list can be accesed through indexing.
  A list is also mutable. Therefore, it is able to be changed without the program having to replace the entire with a copy.  
@@ -62,3 +64,16 @@ OUTPUT: My teams are: ['Raptors', 'Lakers', 'Nets']
 
 
  
+## DICTIONARIES
+A dictionary is a type of container that can  contain references to objects as key-value pairs. The key is a value; in the case, the key is the word and the value is the definition. 
+
+*How is a dictionary created*
+1. Wrap braces { } around key-value pairs ex. {'Jose': 'A+', 'Gino': 'C-'} 
+2. Use the built-in function dict(). ex. dict(John='Texas State University', Adam='Minnesota State University')
+
+|Description| Code|
+| --- | --- |
+|Retrieves the value associated with a key|	jose_grade = my_dict['Jose'] |
+|Adds or  modify an  entry |	my_dict['Jose'] = 'B+' |
+|Deletes the key entry from a dict |	del my_dict['Jose'] |
+|key in my_dict	Tests for existence of key in my_dict |	if 'Jose' in my_dict: # |
