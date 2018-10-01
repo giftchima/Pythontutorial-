@@ -109,3 +109,14 @@ OUTPUT: Coke, Coke_zero, Pepsi
         print(soda)
 OUTPUT: 90, 0 , 94
 
+*Example 4 -  A view object produces one result for each iteration, and views do not support indexing. 
+Therefore, you can use list to iterate over many values.*
+### code
+    solar_distances = dict(mars=219.7e6, venus=116.4e6, jupiter=546e6, pluto=2.95e9)
+    list_of_distances = list(solar_distances.values())  # Convert view to list
+    
+    closest = sorted(list_of_distances)[0]
+    next_closest = sorted(list_of_distances)[1]
+
+    print('Closest planet is %.4e' % closest)
+    print('Second closest planet is %.4e' % next_closest)
