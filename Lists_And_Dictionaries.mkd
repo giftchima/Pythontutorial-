@@ -11,7 +11,7 @@
 
 ## Basics of lists
 
-| Left-aligned     | Center-aligned                                |               |   Right-aligned |                          |                  |                                               | :---          |     :---:      |                        |list.append(x)    |Add an item to the end of list.                |               |                |
+|list.append(x)    |Add an item to the end of list.                |               |                |
 |list.extend([x])  |Add all items in [x] to list.                  | git diff      |                |
 |list.insert(i, x) |Insert x into list before position i.	   | git status    |                |
 |list.remove(x)    |Remove first item from list with value x.      | git diff      |                |
@@ -21,10 +21,6 @@
 
 
 
-
-
-| Left-aligned | Center-aligned | Right-aligned |                |
-| :---         |     :---:      |     :---:     |           ---: |
 
  
  
