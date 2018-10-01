@@ -71,9 +71,10 @@ A dictionary is a type of container that can  contain references to objects as k
 1. Wrap braces { } around key-value pairs ex. {'Jose': 'A+', 'Gino': 'C-'} 
 2. Use the built-in function dict(). ex. dict(John='Texas State University', Adam='Minnesota State University')
 
+### Basics of Dictionaries :common dictionary operations
 |Description| Code|
 | --- | --- |
-|Retrieves the value associated with a key|	jose_grade = my_dict['Jose'] |
-|Adds or  modify an  entry |	my_dict['Jose'] = 'B+' |
-|Deletes the key entry from a dict |	del my_dict['Jose'] |
-|key in my_dict	Tests for existence of key in my_dict |	if 'Jose' in my_dict: # |
+|Retrieves the value associated with a key|	jose_grade = my_dict['John'] |
+|Adds or  modify an  entry |	my_dict['Jackie'] = 'B+' |
+|Deletes the key entry  |	del my_dict['Adam'] |
+|Tests if key exist in dictionary |	if 'Jackie' in my_dict: |
