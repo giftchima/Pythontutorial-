@@ -1,1 +1,14 @@
 # Introduction to Classes
+
+*How to create a class*
+OBJECT. ATTRIBUTE
+1. Use def_init_(self, ...): .  #This uses the attribute init and assigns the variable using self.attribute 
+
+
+*How to create and define a method*
+A method is an operation or an action
+example 1:
+### code
+    def bark(self):
+        print('Woof!')
+        
