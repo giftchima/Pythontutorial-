@@ -69,7 +69,7 @@ A dictionary is a type of container that can  contain references to objects as k
 
 *How is a dictionary created*
 1. Wrap braces { } around key-value pairs ex. {'Jose': 'A+', 'Gino': 'C-'} 
-2. Use the built-in function dict(). ex. dict(John='Texas State University', Adam='Minnesota State University')
+2. Use the built-in function dict(). ex. my_dict = dict(John='Texas State University', Adam='Minnesota State University')
 
 ### Basics of Dictionaries :common dictionary operations
 |Description| Code|
@@ -78,3 +78,33 @@ A dictionary is a type of container that can  contain references to objects as k
 |Adds or  modify an  entry |	my_dict['Jackie'] = 'B+' |
 |Deletes the key entry  |	del my_dict['Adam'] |
 |Tests if key exist in dictionary |	if 'Jackie' in my_dict: |
+
+### Iterating over a dictionary
+
+- dict.items() – returns a view object that yields (key, value) tuples.
+- dict.keys() – returns a view object that yields dictionary keys.
+- dict.values() – returns a view object that yields dictionary values.
+
+*Example 1 - Using dict.items() :*
+### code
+    num_calories = dict(Coke=90, Coke_zero=0, Pepsi=94)
+    for soda, calories in num_calories.items():
+        print('%s: %d' % (soda, calories))
+	
+OUTPUT: Coke: 90
+Coke_zero: 0
+Pepsi: 94
+
+*Example 2 - Using dict.keys() :*
+### code
+    num_calories = dict(Coke=90, Coke_zero=0, Pepsi=94)
+    for soda in num_calories.keys():
+        print(soda)
+OUTPUT: Coke, Coke_zero, Pepsi
+
+*Example 3 - Using dict.values() :*
+### code
+    num_calories = dict(Coke=90, Coke_zero=0, Pepsi=94)
+    for soda in num_calories.values():
+        print(soda)
+OUTPUT: 90, 0 , 94
