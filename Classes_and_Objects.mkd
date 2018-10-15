@@ -1,14 +1,40 @@
-# Introduction to Classes
+# Introduction to Classes and Objects
+
+## Objects
+### In the Python program, an object is made up of some internal data items and operations that can be performed on that data. 
+
+For example, if you wanted to create a cooking program where you can log your ingredient amounts and type, you may need a program to record the amount, ingredient type, and ingredient name in order to compute the totla formula for a specific food item. In the end, you would have " 500g of floor", "2 eggs", " 1 cup of milk" will create "pancake."  A programmer might think of an "object" called IngredientList. 
+
+## Classes
+### In the Python program, a class creates a new type of object. The object maintains a set of attributes that determines the data and behavior of the class. 
 
 *How to create a class*
 OBJECT. ATTRIBUTE
 1. Use def_init_(self, ...): .  #This uses the attribute init and assigns the variable using self.attribute 
 
-
 *How to create and define a method*
 A method is an operation or an action
-example 1:
+*Example 1:*
 ### code
     def bark(self):
         print('Woof!')
         
+*Example 2: Creating a Class for time with methods being hours and minutes*
+### code
+    class Time:
+    def __init__(self):       # A class that represents a time of day 
+        self.hours = 0
+        self.minutes = 0
+        self.seconds = 0
+        
+To access and amend the created class, you can define a new variable. In the below example, we will create a variable called my_time
+### code
+    my_time = Time()
+    my_time.hours = 6
+    my_time.minutes = 30
+    my_time.seconds = 600
+
+    print('%d hours' % my_time.hours, end=' ')
+    print('and %d minutes' % my_time.minutes)
+    print('and %d seconds' % my_time.seconds)
+OUTPUT: 7 hours and 15 minutes and  600 seconds
