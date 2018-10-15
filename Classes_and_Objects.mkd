@@ -77,4 +77,143 @@ OR
  42.195
  42.195
 
-OR
+OR An instance attribute can be different between instances of a class.
+
+### code 
+
+    class MarathonRunner:
+        race_distance = 42.195  # Marathon distance in Kilometers
+
+        def __init__(self):
+            self.speed = 0
+       
+
+        def get_speed(self):
+     
+
+    runner1 = MarathonRunner()
+    runner1.speed = 7.5
+
+    runner2 = MarathonRunner()
+    runner2.speed = 8.0
+
+    print('Runner 1 speed:', runner1.speed)
+    print('Runner 2 speed:', runner2.speed)
+    
+OUTPUT:
+Runner 1 speed: 7.5
+Runner 2 speed: 8.0
+
+#### Changing the behavior of instances
+
+Besides methods, class attributes are constants required only by instances of the class. Placing such constants in the class' scope helps to reduce possible collisions with other variables or functions in the global scope.
+
+You can change the assignment of the instance depending on where you place the global variable. 
+
+### code
+
+    class Time:
+        gmt_offset = 0  # Class attribute. Changing alters print_time output
+    
+        def __init__(self):  # Methods are a class attribute too
+            self.hours = 0  # Instance attribute
+            self.minutes = 0  # Instance attribute
+
+        def print_time(self):  # Methods are a class attribute too
+            offset_hours = self.hours + self.gmt_offset  # Local variable
+            print('Time -- %d:%d' % (offset_hours, self.minutes))
+
+
+    time1 = Time()
+    time1.hours = 10
+    time1.minutes = 15
+
+    time2 = Time()
+    time2.hours = 12
+    time2.minutes = 45
+
+print ('Greenwich Mean Time (GMT):')
+time1.print_time()
+time2.print_time()
+
+Time.gmt_offset = -8  # Change to PST time (-8 GMT)
+
+print('\nPacific Standard Time (PST):')
+time1.print_time()
+time2.print_time()
+
+### Class constructors
+A class instance is commonly initialized to a specific state. 
+
+To add additional parameters to the constructor:
+*Ex 1). *
+### code 
+    class RaceTime:
+        def __init__(self, start_time, end_time, distance):
+        
+
+
+    time_jason = RaceTime('3:15', '7:45', 26.21875)
+    time_bobby = RaceTime('3:15', '6:30', 26.21875)
+    
+*Ex 2). *
+### code
+    class RaceTime:
+
+        def __init__(self, start_hrs, start_mins, end_hrs, end_mins, dist):
+            self.start_hrs = start_hrs
+            self.start_mins = start_mins
+            self.end_hrs = end_hrs
+            self.end_mins = end_mins
+            self.distance = dist
+
+        def print_time(self):
+            if self.end_mins >= self.start_mins:
+                minutes = self.end_mins - self.start_mins
+                hours = self.end_hrs - self.start_hrs
+            else:
+                minutes = 60 - self.start_mins + self.end_mins
+                hours = self.end_hrs - self.start_hrs - 1
+
+            print('Time to complete race: %d:%d' % (hours, minutes))
+
+        def print_pace(self):
+            if self.end_mins >= self.start_mins:
+                minutes = self.end_mins - self.start_mins
+                hours = self.end_hrs - self.start_hrs
+            else:
+                minutes = 60 - self.start_mins + self.end_mins
+                hours = self.end_hrs - self.start_hrs - 1
+
+            total_minutes = hours*60 + minutes
+            print('Avg pace (mins/mile): %.2f' % (total_minutes / self.distance))
+
+     distance = 5.0
+
+    start_hrs = int(input('Enter starting time hours: '))
+    start_mins = int(input('Enter starting time minutes: '))
+    end_hrs = int(input('Enter ending time hours: '))
+    end_mins = int(input('Enter ending time minutes: '))
+
+    race_time = RaceTime(start_hrs, start_mins, end_hrs, end_mins, distance)
+
+    race_time.print_time()
+    race_time.print_pace()
+    
+OUTPUT:
+Enter starting time hours: 5
+Enter starting time minutes: 30
+Enter ending time hours: 7
+Enter ending time minutes: 00
+Time to complete race: 1:30
+Avg pace (mins/mile): 18.00
+
+...
+
+Enter starting time hours: 5
+Enter starting time minutes: 30
+Enter ending time hours: 6
+Enter ending time minutes: 24
+Time to complete race: 0:54
+Avg pace (mins/mile): 10.80
+
