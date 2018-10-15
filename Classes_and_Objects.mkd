@@ -9,23 +9,24 @@ For example, if you wanted to create a cooking program where you can log your in
 #### In the Python program, a class creates a new type of object. The object maintains a set of attributes that determines the data and behavior of the class. 
 
 *How to create a class*
-OBJECT. ATTRIBUTE
+
 1. Use def_init_(self, ...): .  #This uses the attribute init and assigns the variable using self.attribute 
 
 *How to create and define a method*
-A method is an operation or an action
+ A method is a function defined within a class. It is an operation or an action. You can also use OBJECT. ATTRIBUTE to define a attributes within the method.
 *Example 1:*
 ### code
-    def bark(self):
-        print('Woof!')
+    class Dog:
+      def __init__(self):    # Init is a  constructor method that initializes a class instance.
+          print('Woof!')
         
-*Example 2: Creating a Class for time with methods being hours and minutes*
+*Example 2: Creating a Class for time with attributes being hours and minutes*
 ### code
     class Time:
-    def __init__(self):       # A class that represents a time of day 
-        self.hours = 0
-        self.minutes = 0
-        self.seconds = 0
+        def __init__(self):       # A class that represents a time of day 
+            self.hours = 0
+            self.minutes = 0
+            self.seconds = 0
         
 To access and amend the created class, you can define a new variable. In the below example, we will create a variable called my_time
 ### code
@@ -38,3 +39,39 @@ To access and amend the created class, you can define a new variable. In the bel
     print('and %d minutes' % my_time.minutes)
     print('and %d seconds' % my_time.seconds)
 OUTPUT: 7 hours and 15 minutes and  600 seconds
+
+OR 
+
+### code
+    class Time:
+        def __init__(self):
+            self.hours = 0
+            self.minutes = 0
+
+        def print_time(self):
+            print('Hours:', self.hours, end=' ')
+            print('Minutes:', self.minutes)
+
+    time1 = Time()
+    time1.hours = 9
+    time1.minutes = 25
+    time1.print_time()
+ OUTPUT: 9 hours and 25 minutes
+ 
+ *A class attribute is shared amongst all of the instances of that class. Class attributes are defined within the scope of a class.*
+ ### code 
+     class MarathonRunner:
+        race_distance = 42.195  # Marathon distance in Kilometers
+
+      
+    runner1 = MarathonRunner()
+    runner2 = MarathonRunner()
+
+    print(MarathonRunner.race_distance)  # Look in class namespace
+    print(runner1.race_distance)  # Look in instance namespace
+    print(runner2.race_distance)
+    
+ OUTPUT: 
+ 42.195
+ 42.195
+ 42.195
