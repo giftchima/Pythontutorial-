@@ -19,7 +19,8 @@ For example, if you wanted to create a cooking program where you can log your in
     class Dog:
       def __init__(self):    # Init is a  constructor method that initializes a class instance.
           print('Woof!')
-        
+
+
 *Example 2: Creating a Class for time with attributes being hours and minutes*
 ### code
     class Time:
@@ -75,3 +76,5 @@ OR
  42.195
  42.195
  42.195
+
+OR
