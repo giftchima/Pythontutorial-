@@ -1,0 +1,12 @@
+# Introduction to reading files with Python
+
+Python can use various types of data sources for analysis. One of the most common sources for data storage is through files such as 
+spreadsheets, csv , text files e.t.c. In order to manipulate the data on files, the python program first has to open, write, and read
+these files.
+
+In Python, the open function (open()) creates a file object. The read function (read()) saves the content of the file as a string.
+### code 
+    myjournal = open ('journal.txt')
+    contents = myjournal.read()
+    print(contents)
+
