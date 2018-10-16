@@ -65,7 +65,6 @@ To convert numeric values into a string in order to write file:
     f.write(str(num3))
     f.close()
 #### Writing modes
-
 When writing to a file, the mode of the file must be explicitly set in the open() function call. A mode indicates how a file is opened.
 The mode of writing is specified in open() function, as the second arguement ex). open('myfile.txt', 'w')
 If no mode is specified, the default mode is 'r'.
