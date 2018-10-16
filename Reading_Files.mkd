@@ -5,7 +5,7 @@ spreadsheets, csv , text files e.t.c. In order to manipulate the data on files, 
 these files.
 
 In Python, the open function (open()) creates a file object. The read function (read()) saves the content of the file as a string.
-The fll path names can also be specified in the open function.. For example, open('C:\\sers\\BWayne\\tax_return.txt'). 
+The file path names can also be specified in the open function.. For example, open('C:\\sers\\BWayne\\tax_return.txt'). 
 ### code 
     myjournal = open ('journal.txt')
     contents = myjournal.read()
@@ -21,7 +21,6 @@ To close a file, you can use the close() function.
 
 *Example 1: Calculating the average of data per line*
 ### code
-
     f = open('mydata.txt')
     lines = f.readlines()
     f.close()
@@ -74,4 +73,4 @@ If no mode is specified, the default mode is 'r'.
 | ------------- | ------------- |
 | a  |Open the file for appending. If file does not exist then the file is created. Writes are added to end of existing file contents. |
 | w  |Open the file for writing. If file does not exist then the file is created. Contents of an existing file are overwritten.|
-| r  | Open the file for reading. You are not allowed to write, or overwrite file.  |
+| r  | Open the file for reading. You are not allowed to write, overwrite file, or create missing file.|
