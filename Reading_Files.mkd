@@ -20,7 +20,7 @@ In Python, the readlines() method returns a list of strings, where the first ele
     contents = f.read()  
     f.close() 
 
-*Example 1: Calculating the average of data per line*
+ *Example 1: Calculating the average of data per line*
 ### code
      f = open('mydata.txt')
     lines = f.readlines()
@@ -70,7 +70,7 @@ When writing to a file, the mode of the file must be explicitly set in the open(
 The mode of writing is specified in open() function, as the second arguement ex). open('myfile.txt', 'w')
 If no mode is specified, the default mode is 'r'.
 
-| MODE   | Second Header |
+| MODE   | DESCRIPTION |
 | ------------- | ------------- |
 | a  |Open the file for appending. If file does not exist then the file is created. Writes are added to end of existing file contents. |
 | w  |Open the file for writing. If file does not exist then the file is created. Contents of an existing file are overwritten.|
@@ -79,13 +79,59 @@ If no mode is specified, the default mode is 'r'.
 ## OS Module
 In Python, the OS module provides a way of using operating system dependent functionality. The functions that the OS module provides allows you to interface with the underlying operating system that Python is running on – be that Windows, Mac or Linux. 
 
+EXAMPLE
 ### code
-import os
+    import os
+    myfile = open('myfile.txt', 'r')
+    file_info = os.stat('myfile.txt')  #The os module contains functions to utilize the file system. os.stat() queries file information.
 
-# ...
+    os.remove('myfile.txt')
 
-myfile = open('myfile.txt', 'r')
-# ...
-file_info = os.stat('myfile.txt')
-# ...
-os.remove('myfile.txt')
+One of the most useful functions is os.path.join(), which concatenates the arguments using the correct path separator for the current operating system. Instead of writing the literal path = "subdir\\bat_mobile.jpg", a programmer should write path = os.path.join('subdir', 'bat_mobile.jpg'), which will result in "subdir\\bat_mobile.jpg" on Windows, and "subdir/bat_mobile.jpg" on Linux/Mac. 
+
+EXAMPLE - Using os.path.join() to create a portable file path string.
+### code
+    import os
+    import datetime
+
+    curr_day = datetime.date(1997, 8, 29)
+    num_days = 30
+    for i in range(num_days):
+        year = str(curr_day.year)
+        month = str(curr_day.month)
+        day = str(curr_day.day)
+
+        file_path = os.path.join('logs', year, month, day, 'log.txt')  # Build path string using current OS path separator
+        f = open(file_path, 'r')
+        print('%s: %s' % (file_path, f.read()))
+        f.close()
+
+        curr_day = curr_day + datetime.timedelta(days=1)
+        
+  OTHER USEFUL OS FUNCTIONS: 
+  1. os.path.split(path) – Splits a path into a 2-tuple (head, tail), where tail is the last token in the path string and head is everything else. 
+  ### CODE
+      import os
+      p = os.path.join('C:\\', 'Users', 'BWayne', 'batsuit.jpg')
+      print(os.path.split(p))
+  2.os.path.exists(path) – Returns True if path exists, else returns False.
+  ### CODE
+      import os
+      p = os.path.join('C:\\', 'Users', 'BWayne', 'batsuit.jpg')
+      if os.path.exists(p):
+          print('Suit up...')
+      else:
+          print('The Lamborghini then?')
+  3.os.path.isfile(path) – Returns True if path is an existing file, and false otherwise (e.g., path is a directory). 
+  ### CODE
+      import os
+      p = os.path.join('C:\\', 'Users', 'BWayne', 'bat_chopper')
+      if os.path.isfile(p):
+          print('Found a file...')
+      else:
+          print('Not a file...')
+  4.os.path.getsize(path) – Returns the size in bytes of path.
+  ### CODE
+      import os
+      p = os.path.join('C:\\', 'Users', 'BWayne', 'batsuit.jpg')
+      print('Size of file:', os.path.getsize(p), 'bytes')
