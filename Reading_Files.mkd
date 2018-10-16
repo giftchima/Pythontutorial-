@@ -1,4 +1,4 @@
-# Introduction to reading files with Python
+ # Introduction to reading files with Python
 
 Python can use various types of data sources for analysis. One of the most common sources for data storage is through files such as 
 spreadsheets, csv , text files e.t.c. In order to manipulate the data on files, the python program first has to open, write, and read
@@ -11,10 +11,67 @@ The fll path names can also be specified in the open function.. For example, ope
     contents = myjournal.read()
     print(contents)
     
-In Python,the readlines() method returns a list of strings, where the first element is the contents of the first line, the second element is the contents of the second line, and so on.    
+In Python, the readlines() method returns a list of strings, where the first element is the contents of the first line. You can also use the file.readline() method which returns a single line at a time, which is useful when dealing with large files where the entire file contents may not fit into the available system memory. 
+
 To close a file, you can use the close() function.
 ### code
     f = open('myfile.txt') 
     contents = f.read()  
     f.close() 
 
+*Example 1: Calculating the average of data per line*
+### code
+
+    f = open('mydata.txt')
+    lines = f.readlines()
+    f.close()
+
+    total = 0    # Iterate over each line
+    for ln in lines:
+        total += int(ln)
+
+    avg = total/len(lines)   # Compute result
+    print('Average value:', avg)
+    
+ OR 
+ 
+ You can iterate over each line in the file, by simply doing:
+ ### code
+     f = open('myfile.txt')
+     for line in f:
+         print(line)
+
+    f.close()
+    
+### WRITING FILES
+In Python, you can write a file in order to store data permanently.To do this, the file.write() method writes a string argument to a file. The write() method accepts a string argument only. Integers and floating-point values must first be converted using str(). 
+
+### code
+    f = open('myfile.txt', 'w')  # Open file
+    f.write('Example string:\n  test...')  # Write string
+    f.close()  # Close the file
+
+To convert numeric values into a string in order to write file:
+### code
+    num1 = 5
+    num2 = 7.5
+    num3 = num1 + num2
+
+    f = open('myfile.txt', 'w')
+    f.write(str(num1))
+    f.write(' + ')
+    f.write(str(num2))
+    f.write(' = ')
+    f.write(str(num3))
+    f.close()
+#### Writing modes
+
+When writing to a file, the mode of the file must be explicitly set in the open() function call. A mode indicates how a file is opened.
+The mode of writing is specified in open() function, as the second arguement ex). open('myfile.txt', 'w')
+If no mode is specified, the default mode is 'r'.
+
+| MODE   | Second Header |
+| ------------- | ------------- |
+| a  |Open the file for appending. If file does not exist then the file is created. Writes are added to end of existing file contents. |
+| w  |Open the file for writing. If file does not exist then the file is created. Contents of an existing file are overwritten.|
+| r  | Open the file for reading. You are not allowed to write, or overwrite file.  |
