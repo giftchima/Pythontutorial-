@@ -5,8 +5,16 @@ spreadsheets, csv , text files e.t.c. In order to manipulate the data on files, 
 these files.
 
 In Python, the open function (open()) creates a file object. The read function (read()) saves the content of the file as a string.
+The fll path names can also be specified in the open function.. For example, open('C:\\sers\\BWayne\\tax_return.txt'). 
 ### code 
     myjournal = open ('journal.txt')
     contents = myjournal.read()
     print(contents)
+    
+In Python,the readlines() method returns a list of strings, where the first element is the contents of the first line, the second element is the contents of the second line, and so on.    
+To close a file, you can use the close() function.
+### code
+    f = open('myfile.txt') 
+    contents = f.read()  
+    f.close() 
 
