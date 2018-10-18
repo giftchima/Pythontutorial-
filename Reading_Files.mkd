@@ -5,6 +5,17 @@ Python can use various types of data sources for analysis. One of the most commo
 spreadsheets, csv , text files e.t.c. In order to manipulate the data on files, the python program first has to open, write, and read
 these files.
 
+### Types of Files and File Access Methods
+
+In general, two types of files that are used in Python are:
+1.Text file:  contains data that has been encoded as text
+2.Binary  file:  contains data that has not been converted to text.
+
+The ways to access data stored in file are:
+1. Sequential  access: file  read sequentially  from beginning to end, can’t skip ahead.
+2. Direct access: can jump directly  to any piece of data in the file.
+
+### Using Files
 In Python, the open function (open()) creates a file object. The read function (read()) saves the content of the file as a string.
 The file path names can also be specified in the open function.. For example, open('C:\\sers\\BWayne\\tax_return.txt'). 
 ### code 
@@ -109,12 +120,12 @@ EXAMPLE - Using os.path.join() to create a portable file path string.
         
   OTHER USEFUL OS FUNCTIONS: 
   1. os.path.split(path) – Splits a path into a 2-tuple (head, tail), where tail is the last token in the path string and head is everything else. 
-  ### CODE
+  ### code
       import os
       p = os.path.join('C:\\', 'Users', 'BWayne', 'batsuit.jpg')
       print(os.path.split(p))
   2.os.path.exists(path) – Returns True if path exists, else returns False.
-  ### CODE
+  ### code
       import os
       p = os.path.join('C:\\', 'Users', 'BWayne', 'batsuit.jpg')
       if os.path.exists(p):
@@ -122,7 +133,7 @@ EXAMPLE - Using os.path.join() to create a portable file path string.
       else:
           print('The Lamborghini then?')
   3.os.path.isfile(path) – Returns True if path is an existing file, and false otherwise (e.g., path is a directory). 
-  ### CODE
+  ### code
       import os
       p = os.path.join('C:\\', 'Users', 'BWayne', 'bat_chopper')
       if os.path.isfile(p):
@@ -130,7 +141,7 @@ EXAMPLE - Using os.path.join() to create a portable file path string.
       else:
           print('Not a file...')
   4.os.path.getsize(path) – Returns the size in bytes of path.
-  ### CODE
+  ### code
       import os
       p = os.path.join('C:\\', 'Users', 'BWayne', 'batsuit.jpg')
       print('Size of file:', os.path.getsize(p), 'bytes')
