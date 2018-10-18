@@ -8,8 +8,8 @@ these files.
 ### Types of Files and File Access Methods
 
 In general, two types of files that are used in Python are:
-1.Text file:  contains data that has been encoded as text
-2.Binary  file:  contains data that has not been converted to text.
+1. Text file:  contains data that has been encoded as text
+2. Binary  file:  contains data that has not been converted to text.
 
 The ways to access data stored in file are:
 1. Sequential  access: file  read sequentially  from beginning to end, can’t skip ahead.
