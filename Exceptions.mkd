@@ -4,7 +4,7 @@ Exception handling is used to handle errors(exceptional conditions) during execu
 
 When a try is reached, the statements in the try block are executed. If no exception occurs, the except block is skipped and the program continues. If an exception does occur, the except block is executed, and the program continues after the try block. Any statements in the try block not executed before the exception occurred are skipped.
 
-### How to construct Exceptions handling - Try and Except
+### How to construct Exceptions handlers - Try and Except
 #### code 
     try:
        # ...Normal code that might produce erros
@@ -24,6 +24,25 @@ When a try is reached, the statements in the try block are executed. If no excep
          except:
                print('Could not calculate health info.')
        user_input = input('Enter any word (enter 'quit' to quit): ')
+       
+ ## Some Exception Errors
+ 
+ 1. IOError:
+    If the file cannot be opened.
+
+ 2. ImportError
+    If python cannot find the module
+
+ 3. ValueError
+    Raised when a built-in operation or function receives an argument that has the
+    right type but an inappropriate value
+
+ 4. KeyboardInterrupt
+    Raised when the user hits the interrupt key (normally Control-C or Delete)
+
+ 5. EOFError
+    Raised when one of the built-in functions (input() or raw_input()) hits an
+    end-of-file condition (EOF) without reading any data
  
 #### You can also use exception handling with multiple try-except blocks.
 #### code
@@ -49,7 +68,50 @@ When a try is reached, the statements in the try block are executed. If no excep
         # ....
     except (ValueError, TypeError):
         # Exception handler for any ValueError or TypeError that occurs.
-    except (NameError, AttributeError):
+    except (NameError, AttributeError):    #An AttributeError occurs if a function does not exist in an imported module. 
         # A different handler for NameError and Attribute exceptions.
     except:
         # A different handler for any other exception type. 
+        
+      
+ #### code
+      import my_lib
+      try:
+          result = my_lib.magic()
+          f = open(result, 'r')
+          print f.read()
+      except IOError:         # If a file can not be opened, then an IOError may occur
+          print('Could not open file.')
+      except AttributeError:
+          print('No magic() function in my_lib')
+      except:
+          print('Something bad has happened.')
+          
+##  Raising exceptions
+You may wish to ensure that a user enters only valid heights and weights, i.e. greater than 0. Thus, the programmer must introduce error-checking code.
+
+#### code
+    user_input = ''
+    while user_input != 'q':
+    try:
+        weight = int(input('Enter weight (in pounds): '))
+        if weight < 0:
+            raise ValueError('Invalid weight.')
+
+        height = int(input('Enter height (in inches): '))
+        if height <= 0:
+            raise ValueError('Invalid height.')
+
+        bmi = (float(weight) / float(height * height)) * 703
+        print('BMI:', bmi)
+        print('(CDC: 18.6-24.9 normal)\n')
+        # Source www.cdc.gov
+
+    except ValueError as excpt:
+        print(excpt)
+        print('Could not calculate health info.\n')
+
+    user_input = input("Enter any key ('q' to quit): ")
+
+The as keyword binds a name to the exception being handled. The statement except ValueError as excpt creates a new variable excpt that the exception handling code might inspect for details about the exception instance. Printing the exception prints the string argument passed to the exception when raised.
+   
