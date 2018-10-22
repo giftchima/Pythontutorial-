@@ -1,1 +1,55 @@
 # Introduction to Exceptions
+
+Exception handling is used to handle errors(exceptional conditions) during execution.
+
+When a try is reached, the statements in the try block are executed. If no exception occurs, the except block is skipped and the program continues. If an exception does occur, the except block is executed, and the program continues after the try block. Any statements in the try block not executed before the exception occurred are skipped.
+
+### How to construct Exceptions handling - Try and Except
+#### code 
+    try:
+       # ...Normal code that might produce erros
+    except: #Go here if <i> any </i> errors occurs in try block
+       # ...  Exception handing code
+ * Example 1: *
+ #### code
+     user_input = ''
+     while user_input != 'quit':
+     
+         try:
+             weight = int(input('Enter weight (in kgs): '))
+             height = in((input('Enter height( in cm): '))
+             
+             bmi = (float(weight)/float(height * height)) * 703
+             print( 'BMI:' , bmi)
+         except:
+               print('Could not calculate health info.')
+       user_input = input('Enter any word (enter 'quit' to quit): ')
+ 
+##### You can also use exception handling with multiple try-except blocks.
+#### code
+    user_input = ''
+     while user_input != 'quit':
+     
+         try:
+             weight = int(input('Enter weight (in kgs): '))
+             height = in((input('Enter height( in cm): '))
+             
+             bmi = (float(weight)/float(height * height)) * 703
+             print( 'BMI:' , bmi)
+         except ValueError:       #when int function was passed as a string arguement that contained letters.
+             print('Could not calculate health info.')'
+         except ZeroDivisionError:
+             print('Invalid height entered. Must be greater than 0.')
+             
+       user_input = input('Enter any word (enter 'quit' to quit): ')
+       
+##### You can also have multiple exception types handled by the same exception handler.
+#### code
+    try:
+        # ....
+    except (ValueError, TypeError):
+        # Exception handler for any ValueError or TypeError that occurs.
+    except (NameError, AttributeError):
+        # A different handler for NameError and Attribute exceptions.
+    except:
+        # A different handler for any other exception type. 
