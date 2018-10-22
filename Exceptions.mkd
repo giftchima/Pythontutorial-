@@ -25,7 +25,7 @@ When a try is reached, the statements in the try block are executed. If no excep
                print('Could not calculate health info.')
        user_input = input('Enter any word (enter 'quit' to quit): ')
  
-### You can also use exception handling with multiple try-except blocks.
+#### You can also use exception handling with multiple try-except blocks.
 #### code
     user_input = ''
      while user_input != 'quit':
@@ -43,7 +43,7 @@ When a try is reached, the statements in the try block are executed. If no excep
              
        user_input = input('Enter any word (enter 'quit' to quit): ')
        
-##### You can also have multiple exception types handled by the same exception handler.
+#### You can also have multiple exception types handled by the same exception handler.
 #### code
     try:
         # ....
