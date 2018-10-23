@@ -97,7 +97,7 @@ OR
     time1.print_time()
  OUTPUT: 9 hours and 25 minutes
  
-## CLASS VARIABLES 
+### CLASS VARIABLES 
  *A class attribute/variable is shared amongst all of the instances of that class. Class attributes are defined within the scope of a class.*
  ### code 
      class MarathonRunner:
