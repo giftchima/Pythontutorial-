@@ -30,17 +30,17 @@ When a try is reached, the statements in the try block are executed. If no excep
  1. IOError:
     If the file cannot be opened.
 
- 2. ImportError
+ 2. ImportError:
     If python cannot find the module
 
- 3. ValueError
+ 3. ValueError:
     Raised when a built-in operation or function receives an argument that has the
     right type but an inappropriate value
 
- 4. KeyboardInterrupt
+ 4. KeyboardInterrupt:
     Raised when the user hits the interrupt key (normally Control-C or Delete)
 
- 5. EOFError
+ 5. EOFError:
     Raised when one of the built-in functions (input() or raw_input()) hits an
     end-of-file condition (EOF) without reading any data
  
