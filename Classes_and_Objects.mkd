@@ -28,7 +28,45 @@ For example, if you wanted to create a cooking program where you can log your in
             self.hours = 0
             self.minutes = 0
             self.seconds = 0
-        
+            
+*Example 3: Using classes to store employee information*  
+### code
+    class Employee:
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+    def fullname(self):
+        return '{} {}'.format(self.first, self.last)
+
+    emp_1 = Employee('Corey', 'Schafer', 50000)
+    emp_2 = Employee('Test', 'Employee', 60000)
+
+    print(emp_1.first)
+*Example 4: Using classes and methods to retrieve employee information*
+### code
+    class Employee:
+
+    def __init__(self, first, last, pay):
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@email.com'
+        self.pay = pay
+
+    def fullname(self):    #make sure you always place the parameter in the function!
+        return '{} {}'.format(self.first, self.last)
+
+    emp_1 = Employee('Corey', 'Schafer', 50000)
+    emp_2 = Employee('Test', 'Employee', 60000)
+    
+    print(emp_1.fullname())
+    #or you can do this
+    print(Employee.fullname(emp_1))
+OUTPUT: Corey Schafer
+
 To access and amend the created class, you can define a new variable. In the below example, we will create a variable called my_time
 ### code
     my_time = Time()
@@ -59,7 +97,8 @@ OR
     time1.print_time()
  OUTPUT: 9 hours and 25 minutes
  
- *A class attribute is shared amongst all of the instances of that class. Class attributes are defined within the scope of a class.*
+## CLASS VARIABLES 
+ *A class attribute/variable is shared amongst all of the instances of that class. Class attributes are defined within the scope of a class.*
  ### code 
      class MarathonRunner:
         race_distance = 42.195  # Marathon distance in Kilometers
@@ -82,7 +121,7 @@ OR An instance attribute can be different between instances of a class.
 ### code 
 
     class MarathonRunner:
-        race_distance = 42.195  # Marathon distance in Kilometers
+        race_distance = 42.195  # Marathon distance in Kilometers .   # class variable
 
         def __init__(self):
             self.speed = 0
@@ -103,6 +142,33 @@ OR An instance attribute can be different between instances of a class.
 OUTPUT:
 Runner 1 speed: 7.5
 Runner 2 speed: 8.0
+
+You can include the class variable in a function.
+### code
+
+        class Employee:
+        raise_amt = 1.04
+
+        def __init__(self, first, last, pay):
+            self.first = first
+            self.last = last
+            self.email = first + '.' + last + '@email.com'
+            self.pay = pay
+
+        def fullname(self):
+            return '{} {}'.format(self.first, self.last)
+    
+        def apply_raise(self):
+            self.pay = int(self.pay * self.raise_amt)
+            return self.pay
+
+    emp_1 = Employee('Corey', 'Schafer', 50000)
+    emp_2 = Employee('Test', 'Employee', 60000)
+
+    print(emp_1.apply_raise())
+    print (emp_1.__dict__)
+  OUTPUT: 52000      
+  OUTPUT: {'first': 'Corey','pay': 50000,'email': 'CoreySchafer@email.com', 'last': 'Schafer'}
 
 #### Changing the behavior of instances
 
@@ -132,15 +198,15 @@ You can change the assignment of the instance depending on where you place the g
     time2.hours = 12
     time2.minutes = 45
 
-print ('Greenwich Mean Time (GMT):')
-time1.print_time()
-time2.print_time()
+    print ('Greenwich Mean Time (GMT):')
+    time1.print_time()
+    time2.print_time()
 
-Time.gmt_offset = -8  # Change to PST time (-8 GMT)
+    Time.gmt_offset = -8  # Change to PST time (-8 GMT)
 
-print('\nPacific Standard Time (PST):')
-time1.print_time()
-time2.print_time()
+    print('\nPacific Standard Time (PST):')
+    time1.print_time()
+    time2.print_time()
 
 ### Class constructors
 A class instance is commonly initialized to a specific state. 
@@ -208,12 +274,5 @@ Enter ending time minutes: 00
 Time to complete race: 1:30
 Avg pace (mins/mile): 18.00
 
-...
 
-Enter starting time hours: 5
-Enter starting time minutes: 30
-Enter ending time hours: 6
-Enter ending time minutes: 24
-Time to complete race: 0:54
-Avg pace (mins/mile): 10.80
 
