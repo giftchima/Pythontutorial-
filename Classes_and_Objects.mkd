@@ -274,5 +274,29 @@ Enter ending time minutes: 00
 Time to complete race: 1:30
 Avg pace (mins/mile): 18.00
 
+### Constructor default parameters
+Constructor parameters can have default values like any other function, using the name=value syntax. Default parameter values may indicate the default state of an instance. A programmer might then use constructor arguments only to modify the default state if necessary. 
 
+#### code 
+    class Employee:
+    def __init__(self, name, wage=8.25, hours=20):
+        """
+        Default employee is part time (20 hours/week)
+        and earns minimum wage
+        """
+        self.name = name
+        self.wage = wage
+        self.hours = hours
 
+    todd = Employee('Todd')  # Typical part-time employee
+    jason = Employee('Jason')  # Typical part-time employee
+    tricia = Employee('Tricia', wage=12.50, hours=40)  # Manager employee
+
+    employees = [todd, jason, tricia]
+
+    for e in employees:
+         print ('%s earns %.2f per week' % (e.name, e.wage*e.hours))
+OUTPUT: 
+Todd earns 165.00 per week
+Jason earns 165.00 per week
+Tricia earns 500.00 per week
