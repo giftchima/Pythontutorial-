@@ -27,13 +27,13 @@ Linear search is a search algorithm that starts from the beginning of a list, an
         else:
             print('Found ' + str(key) + ' at index ' + str(key_index) + '.')
 #### OUTPUT:
-NUMBERS: 2 4 7 10 11 32 45 87 
-Enter a value: 10
-Found 10 at index 3.
-...
-NUMBERS: 2 4 7 10 11 32 45 87 
-Enter a value: 17
-17 was not found.
+- NUMBERS: 2 4 7 10 11 32 45 87 
+- Enter a value: 10
+- Found 10 at index 3.
+- ...
+- NUMBERS: 2 4 7 10 11 32 45 87 
+- Enter a value: 17
+- 17 was not found.
             
 ### Binary search 
 Linear search may require searching all list elements, which can lead to long runtimes. Because a  list is sorted, a faster search, known as binary search, can be used. It first checks the middle object, and if the desired object comes alphabetically before the middle objecr, binary search will then search the first half and otherwise the last half.
@@ -73,10 +73,10 @@ Binary search reduces runtime or processing time by half.
           print('Found ' + str(key) + ' at index ' + str(key_index) + '.')
           
 #### OUTPUT:
-NUMBERS: 2 4 7 10 11 32 45 87 
-Enter a value: 10
-Found 10 at index 3.
-...
-NUMBERS: 2 4 7 10 11 32 45 87 
-Enter a value: 17
-17 was not found.
+- NUMBERS: 2 4 7 10 11 32 45 87 
+- Enter a value: 10
+- Found 10 at index 3.
+- ...
+- NUMBERS: 2 4 7 10 11 32 45 87 
+- Enter a value: 17
+- 17 was not found.
