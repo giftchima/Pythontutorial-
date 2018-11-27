@@ -1,4 +1,4 @@
-## Searching and algorithms
+## Searching and Sorting
 
 An algorithm is a sequence of steps for accomplishing a task. 
 Linear search is a search algorithm that starts from the beginning of a list, and checks each element until the search key is found.
@@ -80,3 +80,34 @@ Binary search reduces runtime or processing time by half.
 - NUMBERS: 2 4 7 10 11 32 45 87 
 - Enter a value: 17
 - 17 was not found.
+
+## Sort
+Sorting is the process of converting a list of elements into ascending (or descending) order.
+
+### Selection sort algorithm
+Selection sort is a sorting algorithm that treats the input as two parts, a sorted part and an unsorted part, and repeatedly selects the proper next value to move from the unsorted part to the end of the sorted part.
+
+### Binary search algorithm - Example 1:
+
+### code
+
+        for i in range(len(numbers) - 1):
+            # Find index of smallest remaining element
+            index_smallest = i
+            for j in range(i + 1, len(numbers)):
+                if numbers[j] < numbers[index_smallest]:
+                    index_smallest = j
+
+            # Swap numbers[i] and numbers[index_smallest]
+            temp = numbers[i]
+            numbers[i] = numbers[index_smallest]
+            numbers[index_smallest] = temp
+
+The index variable i denotes the dividing point. Elements to the left of i are sorted, and elements including and to the right of i are unsorted. All elements in the unsorted part are searched to find the index of the element with the smallest value. The variable index_smallest stores the index of the smallest element in the unsorted part. Once the element with the smallest value is found, that element is swapped with the element at location i. Then, the index i is advanced one place to the right, and the process repeats
+
+Advantage of selection sort:
+1. Selection sort has the advantage of being easy to code, involving one loop nested within another loop.
+
+### Insertion sort algorithm
+
+Insertion sort is a sorting algorithm that treats the input as two parts, a sorted part and an unsorted part, and repeatedly inserts the next value from the unsorted part into the correct location in the sorted part.
